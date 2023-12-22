@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "To cite this repository, use:"
+license: CC-BY-4.0
+title: "Stationary and portable air quality monitoring with OPC"
+date-released: "2023-12-31"
+type: software
+authors:
+  - family-names: Hirsch
+    given-names: Valentin
+    email: vhirsch@student.ethz.ch
+    orcid: https://orcid.org/0009-0000-8765-1794
+  - family-names: Vijay
+    given-names: Saloni
+    email: svijay@ethz.ch
+    orcid: https://orcid.org/0000-0001-5883-5308
+  - family-names: Tkaczuk
+    given-names: Jakub
+    email: jtkaczuk@ethz.ch
+    orcid: https://orcid.org/0000-0001-7997-9423
+  - family-names: Tilley
+    given-names: Elizabeth
+    email: tilleye@ethz.ch
+    orcid: https://orcid.org/0000-0002-2095-9724
+contact:
+  - family-names: Hirsch
+    given-names: Valentin
+    email: vhirsch@student.ethz.ch
+    orcid: https://orcid.org/0009-0000-8765-1794
+version: 0.0.1
