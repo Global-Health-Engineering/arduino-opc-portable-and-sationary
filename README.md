@@ -4,15 +4,15 @@ This repository allows for building the air quality monitoring asseblies with OP
 
 ## Design
 
-_Insert images from `img` directory_ and their description.
+_Insert images from_ `img` _directory_ together with their descriptions.
 
 CAD drawings for casings can be located in `cad` directory.
 
 ## List of components
 
-| Name | Source | Price in CHF(as of Nov 2023) |
-| ---- | ------ | ---------------------------- |
-|      |        |                              |
+| Name | Source | Price in CHF (Nov 2023) |
+| ---- | ------ | ----------------------- |
+|      |        |                         |
 
 ## Tree
 
