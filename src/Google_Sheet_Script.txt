@@ -1,0 +1,143 @@
+// Sheet URL: <Google Sheet URL>
+// Script URL: <Google Script URL>
+//-----------------------------------------------
+// Original Author: Trieu Le (lethanhtrieuk36@gmail.com)
+// Original publish date: 07-Oct-2015
+// Modified by Valentin Hirsch for bachelor's thesis.
+// Description: Code for transmitting measurement data from the monitor to Google Sheet.
+// GET request syntax:
+// https://script.google.com/macros/s/<gscript id>/exec?header_here=data_here
+//-----------------------------------------------
+
+
+function doGet(e) { 
+  Logger.log( JSON.stringify(e) );  // view parameters
+  var result = 'Ok'; // assume success
+  if (e.parameter == 'undefined') {
+    result = 'No Parameters';
+  }
+  else {
+    var sheet_id = 'SHEET_ID'; 		// Spreadsheet ID
+    var sheet = SpreadsheetApp.openById(sheet_id).getActiveSheet();		// get Active sheet
+    var newRow = sheet.getLastRow() + 1;						
+    var rowData = [];
+    rowData[0] = new Date(); 											// Timestamp in column A
+    for (var param in e.parameter) {
+      Logger.log('In for loop, param=' + param);
+      var value = stripQuotes(e.parameter[param]);
+      Logger.log(param + ':' + e.parameter[param]);
+      switch (param) {
+        case 'date':
+          rowData[1] = value;
+          break;
+        case 'time':
+          rowData[2] = value;
+          break;
+        case 'bin00':
+          rowData[3] = value;
+          break;
+        case 'bin01':
+          rowData[4] = value;
+          break;
+        case 'bin02':
+          rowData[5] = value;
+          break;
+        case 'bin03':
+          rowData[6] = value;
+          break;
+        case 'bin04':
+          rowData[7] = value;
+          break;
+        case 'bin05':
+          rowData[8] = value;
+          break;
+        case 'bin06':
+          rowData[9] = value;
+          break;
+        case 'bin07':
+          rowData[10] = value;
+          break;
+        case 'bin08':
+          rowData[11] = value;
+          break;
+        case 'bin09':
+          rowData[12] = value;
+          break;
+        case 'bin10':
+          rowData[13] = value;
+          break;
+        case 'bin11':
+          rowData[14] = value;
+          break;
+        case 'bin12':
+          rowData[15] = value;
+          break;
+        case 'bin13':
+          rowData[16] = value;
+          break;
+        case 'bin14':
+          rowData[17] = value;
+          break;
+        case 'bin15':
+          rowData[18] = value;
+          break;
+        case 'bin16':
+          rowData[19] = value;
+          break;
+        case 'bin17':
+          rowData[20] = value;
+          break;
+        case 'bin18':
+          rowData[21] = value;
+          break;
+        case 'bin19':
+          rowData[22] = value;
+          break;
+        case 'bin20':
+          rowData[23] = value;
+          break;
+        case 'bin21':
+          rowData[24] = value;
+          break;
+        case 'bin22':
+          rowData[25] = value;
+          break;
+        case 'bin23':
+          rowData[26] = value;
+          break;
+        case 'SP':
+          rowData[27] = value;
+          break;
+        case 'SFR':
+          rowData[28] = value;
+          break;
+        case 'T':
+          rowData[29] = value;
+          break;
+        case 'RH':
+          rowData[30] = value;
+          break;
+        case 'CSmatch':
+          rowData[31] = value;
+          break;
+        default:
+          result = "unsupported parameter";
+      }
+    }
+    Logger.log(JSON.stringify(rowData));
+    // Write new row below
+    var newRange = sheet.getRange(newRow, 1, 1, rowData.length);
+    newRange.setValues([rowData]);
+  }
+  // Return result of operation
+  return ContentService.createTextOutput(result);
+}
+
+function stripQuotes( value ) {
+  return value.replace(/^["']|['"]$/g, "");
+}
+
+
+//-----------------------------------------------
+// End of file
+//-----------------------------------------------
