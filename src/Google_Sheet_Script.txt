@@ -2,7 +2,7 @@
 // Script URL: <Google Script URL>
 //-----------------------------------------------
 // Original Author: Trieu Le (lethanhtrieuk36@gmail.com)
-// Original publish date: 07-Oct-2015
+// Original Publish Date: 07-Oct-2015
 // Modified by Valentin Hirsch for bachelor's thesis.
 // Description: Code for transmitting measurement data from the monitor to Google Sheet.
 // GET request syntax:
