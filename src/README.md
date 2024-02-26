@@ -1,3 +1,11 @@
 # src
 
-This directory contains code for interfacing the OPC sensor with arduino. This software saves the air quality data and the time stamps. It also uses the cellular sheield to push the measurements to the cloud.
+## Portable/Stationary
+
+This directory contains the main code for the Arduino and in the case of the stationary monitor also the Google Sheet script.
+
+## RTC_adjust
+
+This directory contains the code for adjusting the RTC on the Adafruit DLS.
+
+---
