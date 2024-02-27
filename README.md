@@ -1,4 +1,4 @@
-# Portable and stationary and PM monitoring with Alphasense OPC-N3
+# Portable and stationary PM monitoring with Arduino and Alphasense OPC-N3
 
 This repository allows for building the air quality monitoring asseblies with OPC sensors.
 
