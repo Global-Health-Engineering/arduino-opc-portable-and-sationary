@@ -1,4 +1,4 @@
-# CAD
+# cad
 
 This directory contains 3D CAD models of the monitor housings and components.
 
