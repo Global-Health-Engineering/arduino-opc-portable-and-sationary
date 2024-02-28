@@ -8,7 +8,7 @@ Replace the code on the Arduino with something else without reseting/unpowering 
 -------------------- */
 
 
-/* -------- Libraries & Definitions -------- */
+/* -------- Libraries & definitions -------- */
 
 
 #include <RTClib.h>
@@ -38,7 +38,7 @@ void setup() {
 }
 
 
-/* -------- Main Loop -------- */
+/* -------- Main loop -------- */
 
 
 void loop() {
@@ -50,4 +50,4 @@ void loop() {
 }
 
 
-/* -------- End of File -------- */
+/* -------- End of file -------- */
