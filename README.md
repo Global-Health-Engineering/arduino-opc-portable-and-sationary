@@ -10,7 +10,7 @@ CAD drawings for casings can be located in `cad` directory.
 
 ## List of components
 
-### Portable Monitor Electronics
+### Portable Monitor - bill of materials
 
 | Name | Source | Approx. Price (CHF) |
 | ---- | ------ | ----------------------- |
@@ -19,20 +19,12 @@ CAD drawings for casings can be located in `cad` directory.
 | Alphasense OPC-N3                      | N/A | ~500.- |
 | SD card (32 GB)                        | [Mouser](https://www.mouser.ch/ProductDetail/SanDisk/SDSDAA-032G?qs=EgF7oUuTQmpUPFrDZtLtsQ%3D%3D) | 20.- |
 | RTC Battery (CR1220)                   | N/A | 2.- |
-|      |        |                         |
-|      |        |                         |
 
-### Stationary Monitor Electronics
+### Stationary Monitor - bill of materials
 
 | Name | Source | Price in CHF (Nov 2023) |
 | ---- | ------ | ----------------------- |
 |      |        |                         |
-
-
-
-
-
-
 
 ## Tree
 
@@ -41,9 +33,33 @@ CAD drawings for casings can be located in `cad` directory.
     ├── LICENSE.md
     ├── README.md
     ├── cad
-    │   └── README.md
+    │   ├── Portable
+    │   │   ├── Portable_v1-0-0.f3d
+    │   │   ├── Portable_v1-0-0.step
+    │   │   └── Portable_v1-0-0.stl
+    │   ├── README.md
+    │   ├── Stationary
+    │   │   ├── Stationary_v1-0-0.f3d
+    │   │   ├── Stationary_v1-0-0.step
+    │   │   └── Stationary_v1-0-0.stl
+    │   └── misc
+    │       ├── Alphasense_OPC-N3.f3d
+    │       ├── Alphasense_OPC-N3.step
+    │       ├── Arduino_UNO_PCB.f3d
+    │       ├── Arduino_UNO_PCB.step
+    │       ├── SBS_TTBB1000FASTA.f3d
+    │       └── SBS_TTBB1000FASTA.step
     ├── img
     │   └── README.md
-    ├── src
-    │   └── README.md
-    └── tree.md
+    └── src
+        ├── Google_Sheet_Script.txt
+        ├── Portable_v1-0-0
+        │   └── Portable_v1-0-0.ino
+        ├── Portable_v2-0-0
+        │   └── Portable_v2-0-0.ino
+        ├── README.md
+        ├── RTC_adjust_v1-0-0
+        │   ├── README.md
+        │   └── RTC_adjust_v1-0-0.ino
+        └── Stationary_v1-0-0
+            └── Stationary_v1-0-0.ino
