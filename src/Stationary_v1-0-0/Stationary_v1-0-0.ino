@@ -6,7 +6,7 @@ Code for the Arduino of the stationary monitor. Check the README file for docume
 -------------------- */
 
 
-/* -------- Libraries & Definitions -------- */
+/* -------- Libraries & definitions -------- */
 
 
 #include <SPI.h>
@@ -38,7 +38,7 @@ Code for the Arduino of the stationary monitor. Check the README file for docume
 #define BlueLED 7
 
 
-/* -------- User Parameters -------- */
+/* -------- User parameters -------- */
 
 
 String SIM_PIN = "0000"; // Pin code for the SIM card
@@ -152,40 +152,40 @@ void setup()
 }
 
 
-/* -------- Main Loop -------- */
+/* -------- Main loop -------- */
 
 
 void loop()
 {
-  if (FirstMeas == true)
+  if (FirstMeas == true) // Discard the first set of measurements.
   {
     Data = OPCreadData();
     FirstMeas = false;
   }
 
-  CurrentTime = millis();
-  NetworkStatus = SIMcheckNetwork();
+  CurrentTime = millis(); // Update current time form RTC
+  NetworkStatus = SIMcheckNetwork(); // Check if network is connected
 
   if (CurrentTime >= NextMeas)
   {
-    NextMeas = CurrentTime + MeasInterval;
+    NextMeas = CurrentTime + MeasInterval; // Next measurement will be triggered after MeasInterval from now.
 
-    Data = OPCreadData();
+    Data = OPCreadData(); // Read the data from the OPC
 
-    SDsaveData(Data, Filename);
+    SDsaveData(Data, Filename); // Save the data to the SD card.
 
-    bool Sent = SIMsendAll(Data);
+    bool Sent = SIMsendAll(Data); // Send the data to Google Sheet.
 
-    SDsaveSent(Sent, Filename);
+    SDsaveSent(Sent, Filename); // Save wheter the send was succesful to the SD card.
   }
 
 }
 
 
-/* -------------------- RTC Functions -------------------- */
+/* -------- RTC functions -------- */
 
 
-void RTCstart (void) // Start the RTC and adjust it if the Arduino is connected to a PC.
+void RTCstart (void) // Start the RTC.
 {
   int Tries = 0;
 
@@ -200,29 +200,22 @@ void RTCstart (void) // Start the RTC and adjust it if the Arduino is connected 
 
   delay(2000); // Wait 2 seconds for the PCF8523's crystal oscillator to stabilise before trying to adjust the RTC.
 
-  /*if (Serial) // If the serial port is connected, the RTC will be adjusted. --TODO add automatic update functionality (ask for input, if no response within 5? s don't chnage)
-  {
-    RTC.adjust(DateTime(F(__DATE__), F(__TIME__))); // Set the RTC to the current date and time of the host computer.
-
-    Serial.println("RTC has been adjusted");
-  }*/
-
   RTC.start(); // Clear the stop bit of the RTC.
 
   return;
 }
 
 
-/* -------------------- SD Card Functions -------------------- */
+/* -------- SD card functions -------- */
 
 
-void SDstart (void) // Start communication with the SD card //--TODO add comments
+void SDstart (void) // Start communication with the SD card.
 {
   int Tries = 0;
 
-  while (!SD.begin(SPI_DLS_CS)) // Try starting communication with the SD card
+  while (!SD.begin(SPI_DLS_CS)) // Try starting communication with the SD card.
   {
-    if ((Tries == 5) && !SD.begin()) HardError();
+    if ((Tries == 5) && !SD.begin()) HardError(); // Error out after 5 tries (if this happens, check the DLS/SD card).
 
     delay(200); // Wait 200 ms and try again
 
@@ -233,28 +226,28 @@ void SDstart (void) // Start communication with the SD card //--TODO add comment
 }
 
 
-void SDcreateFile (void) // Create a new file on the SD card and write the file header to it //--TODO add comments
+void SDcreateFile (void) // Create a new file on the SD card and write the file header to it.
 {
-  Now = RTC.now(); // Get the current date & time from the RTC
+  Now = RTC.now(); // Get the current date & time from the RTC.
 
   char NameFormat[] = "DDhhmmss"; // Filename will be DDHHMMSS.ext
   Filename = (Now.toString(NameFormat) + FileExtension);
 
-  if (SD.exists(Filename)) HardError();// Check if a file with this name already exists and halt if this is the case
+  if (SD.exists(Filename)) HardError();// Check if a file with this name already exists and error out if this is the case.
 
-  File DataFile = SD.open(Filename, FILE_WRITE); // Open the file
+  File DataFile = SD.open(Filename, FILE_WRITE); // Open the file.
 
-  if (DataFile) // Write the file header to the file
+  if (DataFile) // Write the file header to the file.
   {
     DataFile.print(F("date,time")); // Date & time
 
-    for (int i = 0; i < 24; i++) // Add a leading 0 for single digit bin numbers
+    for (int i = 0; i < 24; i++) // Bin numbers
     {
       DataFile.print(",bin");
 
       if (i < 10)
       {
-        DataFile.print(0);
+        DataFile.print(0); // Add a leading 0 for single digit bin numbers.
       }
 
       DataFile.print(i); // Bin number
@@ -264,26 +257,26 @@ void SDcreateFile (void) // Create a new file on the SD card and write the file 
 
     DataFile.close();
   }
-  else HardError();
+  else HardError(); // Error out if the file can not be opened.
 
   return;
 }
 
 
-void SDsaveData (OPCData Data, String SaveFile) // Save the data from the struct Data to the file SaveFile //--TODO add comments
+void SDsaveData (OPCData Data, String SaveFile) // Save the data from the struct Data to the file SaveFile.
 {
-  if (SD.exists(SaveFile)) // Check if the file exists
+  if (SD.exists(SaveFile)) // Check if the file exists.
   {
-    File DataFile = SD.open(SaveFile, FILE_WRITE);
+    File DataFile = SD.open(SaveFile, FILE_WRITE); // Open the file in WRITE mode.
 
-    if (DataFile) // Write the data to the file
+    if (DataFile) // Write the data to the file.
     {
       DataFile.print(Data.MeasDate);
       SDaddSep(DataFile);
       DataFile.print(Data.MeasTime);
       SDaddSep(DataFile);
 
-      for (int i = 0; i < 24; i++) // Save the BinCounts to the file
+      for (int i = 0; i < 24; i++) // Save the BinCounts to the file.
       {
         DataFile.print(Data.BinCount[i]);
         SDaddSep(DataFile);
@@ -309,15 +302,15 @@ void SDsaveData (OPCData Data, String SaveFile) // Save the data from the struct
 
       DataFile.close();
     }
-    else HardError();
+    else HardError(); // Error out if the file can not be opened.
   }
-  else HardError();
+  else HardError(); // Error out if the file does not exist.
 
   return;
 }
 
 
-void SDsaveSent (bool Success, String SaveFile) // Save to the SD card whether the data and position have successfully been uploaded.
+void SDsaveSent (bool Success, String SaveFile) // Save to the SD card whether the data has successfully been sent.
 {
   if (SD.exists(SaveFile)) // Check if the file exists.
   {
@@ -339,25 +332,25 @@ void SDsaveSent (bool Success, String SaveFile) // Save to the SD card whether t
 
 void SDaddSep (File SaveFile) // Print a column seperator to the file.
 {
-  SaveFile.print(","); // Separator for Columns (typically ',')
+  SaveFile.print(","); // Separator for columns (typically ',')
 
   return;
 }
 
 
-/* -------------------- OPC Functions -------------------- */
+/* -------- OPC functions -------- */
 
 
-void OPCstart (void) //--TODO add comments
+void OPCstart (void) // Start the OPC.
 {
-  // Start the laser
+  // Start the laser.
   OPCquery(0x03);
   SPI.transfer(0x07);
   SetCS(SPI_OPC_CS, LOW);
   SPI.endTransaction();
   delay(1000);
 
-  // Start the fan and wait for it to spin up
+  // Start the fan and wait for it to spin up.
   OPCquery(0x03);
   SPI.transfer(0x03);
   SetCS(SPI_OPC_CS, LOW);
@@ -368,14 +361,14 @@ void OPCstart (void) //--TODO add comments
 }
 
 
-OPCData OPCreadData (void) //--TODO add comments
+OPCData OPCreadData (void) // Read a set of measurements form the OPC.
 {
   OPCData NewData;
-  Now = RTC.now(); // Get the timestamp for the current measurement
+  Now = RTC.now(); // Get the timestamp for the current measurement.
 
   OPCquery(0x30);
 
-  // Read the full histogram from the OPC
+  // Read the full histogram from the OPC.
   for (SPI_Buffer_Index = 0; SPI_Buffer_Index < 86; SPI_Buffer_Index++)
   {
     delayMicroseconds(10);
@@ -385,16 +378,16 @@ OPCData OPCreadData (void) //--TODO add comments
   SetCS(SPI_OPC_CS, HIGH);
   SPI.endTransaction();
 
-  // Transfer the histogram data from the SPI_Buffer to the NewData struct
+  // Transfer the histogram data from the SPI_Buffer to the NewData struct.
   unsigned int BinIndex = 0; // Index for the 24 bins
   uint16_t *pUInt16; // Pointer to unisgned int values
-  uint16_t ConvInt; // Used to temporarilly store the unsigned int values
+  uint16_t ConvInt; // Used to temporarilly store the unsigned int values.
   float *pFloat; // Pointer to float values
 
   char DateFormat[] = "YYYY-MM-DD"; // Date format
   char TimeFormat[] = "hh:mm:ss"; // Time format
 
-  // Transfer/convert the data from the SPI_Buffer to the NewData struct
+  // Transfer/convert the data from the SPI_Buffer to the NewData struct.
 
   // Time & date
   NewData.MeasDate = Now.toString(DateFormat);
@@ -424,7 +417,7 @@ OPCData OPCreadData (void) //--TODO add comments
   ConvInt = *pUInt16;
   NewData.Temperature = -45 + 175*(float)ConvInt/65535;
 
-  // Relative Humidity
+  // Relative humidity
   pUInt16 = (uint16_t *)&SPI_Buffer[58];
   ConvInt = *pUInt16;
   NewData.Humidity = 100*(float)ConvInt/65535;
@@ -447,9 +440,9 @@ OPCData OPCreadData (void) //--TODO add comments
   pUInt16 = (uint16_t *)&SPI_Buffer[84];
   NewData.ChecksumReceived = *pUInt16;
 
-  NewData.ChecksumCalculated = ChecksumCalc(SPI_Buffer, 84); // Calculate the checksum from the received data
+  NewData.ChecksumCalculated = ChecksumCalc(SPI_Buffer, 84); // Calculate the checksum from the received data.
 
-  if (NewData.ChecksumReceived == NewData.ChecksumCalculated) // Compare the received and calculated checksums
+  if (NewData.ChecksumReceived == NewData.ChecksumCalculated) // Compare the received and calculated checksums.
   {
     NewData.ChecksumMatch = true;
   }
@@ -462,27 +455,27 @@ OPCData OPCreadData (void) //--TODO add comments
 }
 
 
-void OPCquery (unsigned char Command) // Start SPI communication with the OPC //--TODO add comments
+void OPCquery (unsigned char Command) // Start SPI communication with the OPC.
 {
   unsigned char Response;
   int Tries;
 
   SPI.beginTransaction(SPISettings(300000, MSBFIRST, SPI_MODE1));
 
-  Response = SPI.transfer(Command); // Read a byte to clear the OPC's SPI buffer
+  Response = SPI.transfer(Command); // Read a byte to clear the OPC's SPI buffer.
 
   delay (1);
 
   do
   {
-    SetCS(SPI_OPC_CS, LOW);
+    SetCS(SPI_OPC_CS, LOW); // Pull OPC SPI CS pin low to start transmission.
     Tries = 0;
 
     do
     {
       Response = SPI.transfer(Command);
 
-      if (Response != OPC_ready)
+      if (Response != OPC_ready) // Check if the OPC reports ready for communiation.
       {
         delay(1);
       }
@@ -493,13 +486,13 @@ void OPCquery (unsigned char Command) // Start SPI communication with the OPC //
 
     if (Response != OPC_ready)
     {
-      if (Response == OPC_busy) // If the OPC indicates that it is busy, set the CS pin of the OPC high and wait a few seconds before trying again
+      if (Response == OPC_busy) // If the OPC indicates that it is busy, set the CS pin of the OPC high and wait a few seconds before trying again.
       {
         SetCS(SPI_OPC_CS, HIGH);
 
         delay(2000);
       }
-      else // If the response is neither OPC_ready nor OPC_busy, stop SPI communication and delay before trying again
+      else // If the response is neither OPC_ready nor OPC_busy, stop SPI communication and delay before trying again.
       {
         SetCS(SPI_OPC_CS, HIGH);
         SPI.endTransaction();
@@ -510,8 +503,7 @@ void OPCquery (unsigned char Command) // Start SPI communication with the OPC //
       }
     }
   }
-  //while (Response != OPC_ready);
-  while ((Response != OPC_ready) && (Serial.available() == 0)); //--CHECK if works with other line
+  while ((Response != OPC_ready) && (Serial.available() == 0));
 
   delay(10);
 
@@ -519,7 +511,7 @@ void OPCquery (unsigned char Command) // Start SPI communication with the OPC //
 }
 
 
-unsigned int ChecksumCalc (unsigned char SPI_Data[], unsigned char DataBytes) // Calculate the checksum //--TODO add comments
+unsigned int ChecksumCalc (unsigned char SPI_Data[], unsigned char DataBytes) // Calculate the checksum.
 {
   #define Polynom 0xA001
   #define InitVal 0xFFFF
@@ -546,7 +538,7 @@ unsigned int ChecksumCalc (unsigned char SPI_Data[], unsigned char DataBytes) //
 }
 
 
-/* -------------------- SIM Functions -------------------- */
+/* -------- SIM functions -------- */
 
 
 void SIMstart (String PIN) // Start the SIM module and unlock the SIM card.
@@ -571,7 +563,7 @@ void SIMstart (String PIN) // Start the SIM module and unlock the SIM card.
 
   while (Status.indexOf("+CFUN: 1") == -1) // Set the SIM module to full functionality mode.
   {
-    if (Tries > 4) HardError(); // Error out after 5 tries (if this happens, check the SIM module).
+    if (Tries > 4) HardError(); // Error out after 5 tries (if this happens check the SIM module).
 
     SIMsendCommand("AT+CFUN=1", 1000);
     delay(1000);
@@ -601,7 +593,7 @@ void SIMstart (String PIN) // Start the SIM module and unlock the SIM card.
 
     Status = SIMsendCommand("AT+CPIN?", 1000); // Check for the SIM unlock status.
 
-    if (Tries > 4) HardError(); // Error out after 5 tries (if this happens, check the SIM card).
+    if (Tries > 4) HardError(); // Error out after 5 tries (if this happens check the SIM card).
 
     delay(500);
     Tries++;
@@ -613,18 +605,18 @@ void SIMstart (String PIN) // Start the SIM module and unlock the SIM card.
 
 String SIMsendCommand (String Command, const uint16_t Timeout) // Send a command to the SIM module.
 {
-  String Response = ""; // String for the Response from the SIM Module
+  String Response = ""; // String for the response from the SIM module.
 
   myserial.println(Command); // Write the command to the SIM module over the serial connection.
 
-  unsigned long CommandTime = millis(); // Get the Current Time
+  unsigned long CommandTime = millis(); // Get the current time.
 
   while ((CommandTime + Timeout) > millis()) // If the timeout has not been reached yet, listen for and store the response from the SIM module.
   { 
     while (myserial.available() > 0)
     {
-      char c = myserial.read(); // Read a char
-      Response += c; // Append the char
+      char c = myserial.read(); // Read a char.
+      Response += c; // Append the char.
     }
   }
 
@@ -632,12 +624,12 @@ String SIMsendCommand (String Command, const uint16_t Timeout) // Send a command
 }
 
 
-bool SIMsendAll(OPCData Data) // Send the OPC data and the GPS position to the database. --TODO
+bool SIMsendAll(OPCData Data) // Send the OPC data to Google Sheet.
 {
   String Status = "";
   int Tries;
 
-  Status = SIMsendCommand("AT+CFUN?", 1000);
+  Status = SIMsendCommand("AT+CFUN?", 1000); // Check SIM module status.
   Tries = 0;
 
   delay(50);
@@ -646,7 +638,7 @@ bool SIMsendAll(OPCData Data) // Send the OPC data and the GPS position to the d
   {
     while (Status.indexOf("+CFUN: 1") == -1)
     {
-      if (Tries > 4) return 0; // explain return value
+      if (Tries > 4) return 0;
 
       SIMsendCommand("AT+CFUN=1", 1000);
       delay(50);
@@ -664,30 +656,28 @@ bool SIMsendAll(OPCData Data) // Send the OPC data and the GPS position to the d
   SIMsendCommand("AT+CGDCONT=1,\"IP\",\"apn\"", 1000);
 
 
-  if (SIMcheckNetwork() == true) // If a network connection is available, upload the data and position to the DB.
+  if (SIMcheckNetwork() == true) // If a network connection is available, send the data.
   {
-    // send data to DB --TODO
-
     String HTTPstring = "";
 
     String Response = SIMsendCommand("AT+HTTPINIT\r\n", 2000);
 
     Serial.println(Response);
 
-    Serial.println("starting transmission"); //--DEBUG
+    Serial.println("Starting transmission."); //--DEBUG
 
-    //String HTTPstring = "AT+HTTPPARA=\"URL\",\"" + ScriptURL + "?date=" + Data.MeasDate + "&time=" + Data.MeasTime;
+    // Assemble the HTTPstring.
     HTTPstring = "AT+HTTPPARA=\"URL\",\"" + ScriptURL + "?date=" + (String)Data.MeasDate + "&time=" + (String)Data.MeasTime;
     HTTPstring = HTTPstring + "&SP=" + (String)Data.SamplingPeriod + "&SFR=" + (String)Data.SampleFlowRate;
     HTTPstring = HTTPstring + "&T=" + (String)Data.Temperature + "&RH=" + (String)Data.Humidity + "&CSmatch=" + (String)Data.ChecksumMatch;
     
-    for (int i = 0; i < 24; i++) // Add a leading 0 for single digit bin numbers
+    for (int i = 0; i < 24; i++)
     {
       HTTPstring = HTTPstring + "&bin";
 
       if (i < 10)
       {
-        HTTPstring = HTTPstring + "0";
+        HTTPstring = HTTPstring + "0"; // Add a leading 0 for single digit bin numbers.
       }
 
       int Value = Data.BinCount[i];
@@ -703,7 +693,7 @@ bool SIMsendAll(OPCData Data) // Send the OPC data and the GPS position to the d
     Response = SIMsendCommand(HTTPstring, 2000);
     SIMsendCommand("AT+HTTPACTION=0\r\n", 3000);
 
-    Serial.print("response to send is: ");
+    Serial.print("Response to send is: "); //--DEBUG
     Serial.println(Response);
 
     delay(200);
@@ -711,7 +701,7 @@ bool SIMsendAll(OPCData Data) // Send the OPC data and the GPS position to the d
     SIMsendCommand("AT+HTTPTERM\r\n", 3000);
   }
 
-  return 1; // explain return value
+  return 1;
 }
 
 
@@ -724,7 +714,7 @@ bool SIMcheckNetwork (void) // Check if the SIM module is connected to a network
     SetLED(BlueLED, LOW); // Turn the network indication LED OFF.
     return false; // Return false if no network is connected.
   }
-  else // Any number other than 0 indicates a network connection. --TODO add check for what network type it is!
+  else // Any number other than 0 indicates a network connection.
   {
     SetLED(BlueLED, HIGH); // Turn the network indication LED ON.
     return true; // Return true if a network is connected.
@@ -767,4 +757,4 @@ void HardError (void) // Blink the red LED and halt until the Arduino is reset.
 }
 
 
-/* -------- End of File -------- */
+/* -------- End of file -------- */
