@@ -25,7 +25,7 @@ void setup() {
 
   Serial.println("Starting setup.");
 
-  if (! RTC.begin()) { // Check if the RTC is connected
+  if (! RTC.begin()) { // Check if the RTC is connected.
     Serial.println("Couldn't find RTC.");
     Serial.flush();
     while (1) delay(10); // Wait until reset.
