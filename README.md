@@ -10,21 +10,53 @@ CAD drawings for casings can be located in `cad` directory.
 
 ## List of components
 
-### Portable Monitor - bill of materials
+### Portable monitor - bill of materials
 
-| Name | Source | Approx. Price (CHF) |
+| Name | Source | Approx. price (CHF) |
 | ---- | ------ | ----------------------- |
 | Arduino UNO (R3/R4 Minima)             | [Mouser](https://www.mouser.ch/ProductDetail/Arduino/ABX00080?qs=ulEaXIWI0c9tbG%2FHj5EzRA%3D%3D) | 18.- |
 | Adafruit Data Logger Shield (Rev. C)   | [Mouser](https://www.mouser.ch/ProductDetail/Adafruit/1141?qs=GURawfaeGuAe9uOWyGs1aw%3D%3D) | 12.- |
-| Alphasense OPC-N3                      | N/A | ~500.- |
 | SD card (32 GB)                        | [Mouser](https://www.mouser.ch/ProductDetail/SanDisk/SDSDAA-032G?qs=EgF7oUuTQmpUPFrDZtLtsQ%3D%3D) | 20.- |
-| RTC Battery (CR1220)                   | N/A | 2.- |
+| RTC battery (CR1220)                   | N/A | 2.- |
+| Alphasense OPC-N3                      | N/A | ~500.- |
+| Small components (LEDs, resistors, wires, etc.) | N/A | ~10.- |
 
-### Stationary Monitor - bill of materials
+### Stationary monitor - bill of materials
 
-| Name | Source | Price in CHF (Nov 2023) |
+| Name | Source | Approx. price (CHF) |
 | ---- | ------ | ----------------------- |
-|      |        |                         |
+| Arduino UNO (R3/R4 Minima)             | [Mouser](https://www.mouser.ch/ProductDetail/Arduino/ABX00080?qs=ulEaXIWI0c9tbG%2FHj5EzRA%3D%3D) | 18.- |
+| Adafruit Data Logger Shield (Rev. C)   | [Mouser](https://www.mouser.ch/ProductDetail/Adafruit/1141?qs=GURawfaeGuAe9uOWyGs1aw%3D%3D) | 12.- |
+| SD card (32 GB)                        | [Mouser](https://www.mouser.ch/ProductDetail/SanDisk/SDSDAA-032G?qs=EgF7oUuTQmpUPFrDZtLtsQ%3D%3D) | 20.- |
+| RTC battery (CR1220)                   | N/A | 2.- |
+| Alphasense OPC-N3                      | N/A | ~500.- |
+| UPS board                              | N/A |  |
+| UPS batteries (2x 18650)               | N/A |  |
+| DFRobot SIM7600CE-T                    | N/A |  |
+| Small components (LEDs, resistors, wires, etc.) | N/A | ~15.- |
+|  |  |  |
+
+## Instructions
+
+### Portable monitor
+
+#### Assembly
+
+#### Usage
+
+### Stationary monitor
+
+#### Assembly
+
+#### Usage
+
+
+
+
+
+
+
+
 
 ## Tree
 
