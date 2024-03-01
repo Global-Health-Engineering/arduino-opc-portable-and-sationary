@@ -55,7 +55,7 @@ CAD drawings for casings can be located in `cad` directory.
 
 
 ```stl
-[cad/Portable/test.stl]
+cad/Portable/test.stl
 ```
 
 
