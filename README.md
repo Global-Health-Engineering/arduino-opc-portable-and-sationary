@@ -52,9 +52,10 @@ CAD drawings for casings can be located in `cad` directory.
 
 ## 3D printed housings
 
-![Portable housing](/cad/Portable/Portable_CAD.png)
+![Portable housing](/img/Portable_CAD.png)
 
 
+![Stationary housing](/img/Stationary_CAD.png)
 
 
 
