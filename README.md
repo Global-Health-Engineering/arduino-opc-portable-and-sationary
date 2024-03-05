@@ -2,12 +2,6 @@
 
 This repository allows for building the air quality monitoring asseblies with OPC sensors.
 
-## Design
-
-_Insert images from_ `img` _directory_ together with their descriptions.
-
-CAD drawings for casings can be located in `cad` directory.
-
 ## List of components
 
 ### Portable monitor - bill of materials
@@ -34,7 +28,6 @@ CAD drawings for casings can be located in `cad` directory.
 | UPS batteries (2x 18650)               | N/A |  |
 | DFRobot SIM7600CE-T                    | N/A |  |
 | Small components (LEDs, resistors, wires, etc.) | N/A | ~15.- |
-|  |  |  |
 
 ## Instructions
 
@@ -52,12 +45,11 @@ CAD drawings for casings can be located in `cad` directory.
 
 ## 3D printed housings
 
+CAD files for designed casings can be located in `cad` directory. They are also shown below.
+
 ![Portable housing](/img/Portable_CAD.png)
 
-
 ![Stationary housing](/img/Stationary_CAD.png)
-
-
 
 ## Tree
 
@@ -69,7 +61,8 @@ CAD drawings for casings can be located in `cad` directory.
     │   ├── Portable
     │   │   ├── Portable_v1-0-0.f3d
     │   │   ├── Portable_v1-0-0.step
-    │   │   └── Portable_v1-0-0.stl
+    │   │   ├── Portable_v1-0-0.stl
+    │   │   └── test.stl
     │   ├── README.md
     │   ├── Stationary
     │   │   ├── Stationary_v1-0-0.f3d
@@ -83,16 +76,21 @@ CAD drawings for casings can be located in `cad` directory.
     │       ├── SBS_TTBB1000FASTA.f3d
     │       └── SBS_TTBB1000FASTA.step
     ├── img
-    │   └── README.md
+    │   ├── Portable_CAD.png
+    │   ├── README.md
+    │   └── Stationary_CAD.png
     └── src
-        ├── Google_Sheet_Script.txt
+        ├── Data_Reception
+        │   └── Google_Sheet_Script.txt
         ├── Portable_v1-0-0
         │   └── Portable_v1-0-0.ino
         ├── Portable_v2-0-0
         │   └── Portable_v2-0-0.ino
         ├── README.md
-        ├── RTC_adjust_v1-0-0
+        ├── RTC_adjust
         │   ├── README.md
         │   └── RTC_adjust_v1-0-0.ino
-        └── Stationary_v1-0-0
+        └── Stationary
+            ├── README.md
             └── Stationary_v1-0-0.ino
+

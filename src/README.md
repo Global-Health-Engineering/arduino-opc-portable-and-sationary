@@ -1,18 +1,20 @@
 # src
 
-This directory contains the source code for Arduino.
+This directory contains the source code for Arduino and for receiving data sent by Arduino.
 
     .
-    ├── Google_Sheet_Script.txt
+    ├── Data_Reception
+    │   └── Google_Sheet_Script.txt
     ├── Portable_v1-0-0
     │   └── Portable_v1-0-0.ino
     ├── Portable_v2-0-0
     │   └── Portable_v2-0-0.ino
     ├── README.md
-    ├── RTC_adjust_v1-0-0
+    ├── RTC_adjust
     │   ├── README.md
     │   └── RTC_adjust_v1-0-0.ino
-    └── Stationary_v1-0-0
+    └── Stationary
+        ├── README.md
         └── Stationary_v1-0-0.ino
 
 | name | description |
