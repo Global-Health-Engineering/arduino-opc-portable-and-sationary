@@ -156,18 +156,18 @@ void loop()
 }
 
 
-/* -------------------- RTC Functions -------------------- */
+/* -------- RTC functions -------- */
 
 
-void StartRTC (void) // Start the RTC and adjust it if the Arduino is connected to a PC
+void StartRTC (void) // Start the RTC.
 {
-  RetryTimer = 0;
+  RetryTimer = 0; // Reset the timeout timer to 0.
 
-  while (!RTC.begin()) // Try starting the RTC
+  while (!RTC.begin()) // Try starting the RTC.
   {
-    RetryTimer += 200;
+    RetryTimer += 200; // Increase the timeout timer.
 
-    if (RetryTimer >= Timeout) // Error out if the RTC doesn't start within Timeout 
+    if (RetryTimer >= Timeout) // Error out if the RTC doesn't start within Timeout (if this happens, check the DLS/RTC).
     {
       HardError();
     }
@@ -175,15 +175,15 @@ void StartRTC (void) // Start the RTC and adjust it if the Arduino is connected 
     delay(200); // Wait 200 ms and try again
   }
 
-  delay(2000); // Wait 2 seconds for the PCF8523's crystal oscillator to stabilise before trying to adjust the RTC
+  delay(2000); // Wait 2 seconds for the PCF8523's crystal oscillator to stabilise.
 
-  //RTC.adjust(DateTime(F(__DATE__), F(__TIME__)));
-
-  RTC.start(); // Clear the stop bit of the RTC
+  RTC.start(); // Clear the stop bit of the RTC.
+  
+  return;
 }
 
 
-/* -------------------- SD Card Functions -------------------- */
+/* -------- SD card functions -------- */
 
 
 void StartSD (void) // Start communication with the SD card
