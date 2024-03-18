@@ -1,25 +1,42 @@
-/*
---TODO
-*/
+/* --------------------
+Portable
+v1-0-0
+
+Code for the Arduino of the portable monitor. Check the README file for documentation.
+-------------------- */
 
 
-#include <SPI.h>
-#include <SD.h>
-#include <RTClib.h>
+/* -------- Libraries & definitions -------- */
 
 
-#define OPC_busy 0x31 // This hex value indicates that the OPC is NOT ready for SPI communication.
-#define OPC_ready 0xF3 // This hex value indicates that teh OPC IS ready for SPI communication.
+#include <SPI.h> // CHECK LICENSE
+#include <SD.h> // CHECK LICENSE
+#include <RTClib.h> // CHECK LICENSE
 
-#define SPI_SCK 13 // SPI clock pin on Arduino UNO
-#define SPI_SDI 12 // SPI SDI (MISO) pin on Arduino UNO
-#define SPI_SDO 11 // SPI SDO (MOSI) pin on Arduino UNO
+// Pins for SPI
+#define SPI_SCK 13 // Clock
+#define SPI_SDI 12 // SDI
+#define SPI_SDO 11 // SDO
 
-#define SPI_OPC_CS 9 // Chip select pin for the OPC
-#define SPI_DLS_CS 10 // Chip select pin for the DLS
+// SPI chipselect pins
+#define SPI_OPC_CS 9
+#define SPI_DLS_CS 10
 
-#define GreenLED 3 // Pin for the green LED on the DLS
-#define RedLED 4 // Pin for the red LED on the DLS
+// OPC status bytes
+#define OPC_busy 0x31
+#define OPC_ready 0xF3
+
+// Pins for serial communication
+#define SIM_RX 0
+#define SIM_TX 1
+#define SIM_PWR 8
+
+// Pins for external status LEDs
+#define GreenLED 3
+#define RedLED 4
+
+
+/* -------- User parameters -------- */
 
 
 unsigned char SPI_Buffer[86]; // Buffer for reading data from the OPC
@@ -498,4 +515,4 @@ void HardError (void) // Blink the red LED and halt until the Arduino is reset
 }
 
 
-/* ----- fin ----- */
+/* -------- End of file -------- */
