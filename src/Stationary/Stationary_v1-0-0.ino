@@ -198,7 +198,7 @@ void RTCstart (void) // Start the RTC.
     Tries++;
   }
 
-  delay(2000); // Wait 2 seconds for the PCF8523's crystal oscillator to stabilise before trying to adjust the RTC.
+  delay(2000); // Wait 2 seconds for the PCF8523's crystal oscillator to stabilise.
 
   RTC.start(); // Clear the stop bit of the RTC.
 
