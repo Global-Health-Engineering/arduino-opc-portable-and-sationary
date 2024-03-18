@@ -26,11 +26,6 @@ Code for the Arduino of the portable monitor. Check the README file for document
 #define OPC_busy 0x31
 #define OPC_ready 0xF3
 
-// Pins for serial communication
-#define SIM_RX 0
-#define SIM_TX 1
-#define SIM_PWR 8
-
 // Pins for external status LEDs
 #define GreenLED 3
 #define RedLED 4
@@ -39,51 +34,59 @@ Code for the Arduino of the portable monitor. Check the README file for document
 /* -------- User parameters -------- */
 
 
-unsigned char SPI_Buffer[86]; // Buffer for reading data from the OPC
-unsigned int SPI_Buffer_Index; // Index for SPI_Buffer
+unsigned int MeasInterval = 10000; // Measurement interval in (ms)
+unsigned long Timeout = 1000; // Timeout in (ms)
+
+String FileExtension = ".csv"; // File extension of the local save file (.csv or .txt)
+
+
+/* -------- Variables -------- */
+
 
 struct OPCData // Struct for storing the data from the OPC
 {
-  String MeasDate; //--TODO
+  String MeasDate;
   String MeasTime;
 
-  uint16_t BinCount[24]; // Sample counts for each of the 24 bins
+  uint16_t BinCount[24];
 
-  float SamplingPeriod; // Sampling period reported by the OPC
-  float SampleFlowRate; // Sample flow rate reported by the OPC
-  float Temperature; // Temperature from the OPC's temperature sensor, very inaccurate
-  float Humidity; // Relative humidity from the OPC's humidity sensor, very inaccurate
+  float SamplingPeriod;
+  float SampleFlowRate;
+  float Temperature;
+  float Humidity;
 
-  float PMA; //--TODO
+  float PMA;
   float PMB;
   float PMC;
 
   uint16_t LaserStatus; // Laser status of the OPC, 550 < LaserStatus < 650 during normal operation
 
-  uint16_t ChecksumReceived; // The checksum received from the OPC
-  uint16_t ChecksumCalculated; // The checksum calculated from the data in the struct
-  bool ChecksumMatch; // 1 if the received and calculated checksums match, 0 otherwise
+  uint16_t ChecksumReceived;
+  uint16_t ChecksumCalculated;
+  bool ChecksumMatch;
 };
 
-unsigned int MeasInterval = 10000; // The measurment interval in (ms)
+// SPI buffer for reading data from the OPC.
+unsigned char SPI_Buffer[86];
+unsigned int SPI_Buffer_Index;
+
 unsigned long CurrentTime;
 unsigned long NextMeas;
 
 unsigned long RetryTimer = 0;
-unsigned long Timeout = 1000;
 
-bool FirstMeas; // Used to identify the first histogram read from the OPC.
+bool FirstMeas; // Used to discard the first set of measurements
+
 
 RTC_PCF8523 RTC;
 DateTime Now;
 
 String Filename;
-String FileExtension = ".csv";
 
 OPCData Data;
 
 
-/* -------------------- Setup & Loop -------------------- */
+/* -------- Setup -------- */
 
 
 void setup()
@@ -92,11 +95,13 @@ void setup()
 
   delay(2000);
 
+  // Configure LED pins
   pinMode(GreenLED, OUTPUT);
   pinMode(RedLED, OUTPUT);
   SetLED(GreenLED, LOW);
   SetLED(RedLED, HIGH);
 
+  // Configure SPI CS pins
   pinMode(SPI_OPC_CS, OUTPUT);
   pinMode(SPI_DLS_CS, OUTPUT);
   SetCS(SPI_OPC_CS, HIGH);
@@ -106,10 +111,15 @@ void setup()
 
   SPI.begin();
 
+  // Start all devices
   StartRTC();
+  Serial.println("RTC started!");
   StartSD();
+  Serial.println("SD started!");
   CreateSDFile();
+  Serial.println("SD file started!");
   StartOPC();
+  Serial.println("OPC started!");
 
   CurrentTime = millis();
   NextMeas = CurrentTime;
@@ -118,6 +128,9 @@ void setup()
   delay(1000);
   SetLED(RedLED, LOW);
 }
+
+
+/* -------- Main loop -------- */
 
 
 void loop()
