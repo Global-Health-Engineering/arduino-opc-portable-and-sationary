@@ -35,36 +35,29 @@ A high-level overview of the components required for each is provided below.
 | DFRobot SIM7600CE-T                    | [Mouser]() | ?.- |
 | Small components (LEDs, resistors, wires, etc.) | N/A | ~15.- |
 
-## 2 Assembly guide
-
-### 2.1. Portable monitor
-
-### 2.2. Stationary monitor
-
-## 3 Usage guide
-
-### 3.1. Portable monitor
-
-### 3.2. Stationary monitor
-
-## 4 Example usage
-
-## 5 Change log
-
-
-
-
-
-
-
-
-## 3D printed housings
+### 1.2. 3D printed housings
 
 CAD files for designed casings can be located in `cad` directory. They are also shown below.
 
 ![Portable housing](/img/Portable_CAD.png)
 
 ![Stationary housing](/img/Stationary_CAD.png)
+
+## 2. Assembly guide
+
+### 2.1. Portable monitor
+
+### 2.2. Stationary monitor
+
+## 3. Usage guide
+
+### 3.1. Portable monitor
+
+### 3.2. Stationary monitor
+
+## 4. Example usage
+
+## 5. Change log
 
 ## Tree
 
