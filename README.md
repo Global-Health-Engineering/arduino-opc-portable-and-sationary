@@ -1,47 +1,62 @@
 # Portable and stationary PM monitoring with Arduino and Alphasense OPC-N3
 
-This repository allows for building the air quality monitoring asseblies with OPC sensors.
+## 1. Overview
 
-## List of components
+This repository allows for building particulate matter monitoring systems using Arduino UNOs and Alphasense OPC-N3 optical particle counter modules.
 
-### Portable monitor - bill of materials
+There are two versions, a portable monitor which can be worn by a person and a stationary monitor.
+
+A high-level overview of the components required for each is provided below.
+
+### 1.1. Basic bill of materials
+
+#### Portable monitor
 
 | Name | Source | Approx. price (CHF) |
 | ---- | ------ | ----------------------- |
 | Arduino UNO (R3/R4 Minima)             | [Mouser](https://www.mouser.ch/ProductDetail/Arduino/ABX00080?qs=ulEaXIWI0c9tbG%2FHj5EzRA%3D%3D) | 18.- |
 | Adafruit Data Logger Shield (Rev. C)   | [Mouser](https://www.mouser.ch/ProductDetail/Adafruit/1141?qs=GURawfaeGuAe9uOWyGs1aw%3D%3D) | 12.- |
 | SD card (32 GB)                        | [Mouser](https://www.mouser.ch/ProductDetail/SanDisk/SDSDAA-032G?qs=EgF7oUuTQmpUPFrDZtLtsQ%3D%3D) | 20.- |
-| RTC battery (CR1220)                   | N/A | 2.- |
+| RTC battery (CR1220)                   | [Digitec]() | ?.- |
 | Alphasense OPC-N3                      | N/A | ~500.- |
 | Small components (LEDs, resistors, wires, etc.) | N/A | ~10.- |
 
-### Stationary monitor - bill of materials
+#### Stationary monitor
 
 | Name | Source | Approx. price (CHF) |
 | ---- | ------ | ----------------------- |
 | Arduino UNO (R3/R4 Minima)             | [Mouser](https://www.mouser.ch/ProductDetail/Arduino/ABX00080?qs=ulEaXIWI0c9tbG%2FHj5EzRA%3D%3D) | 18.- |
 | Adafruit Data Logger Shield (Rev. C)   | [Mouser](https://www.mouser.ch/ProductDetail/Adafruit/1141?qs=GURawfaeGuAe9uOWyGs1aw%3D%3D) | 12.- |
 | SD card (32 GB)                        | [Mouser](https://www.mouser.ch/ProductDetail/SanDisk/SDSDAA-032G?qs=EgF7oUuTQmpUPFrDZtLtsQ%3D%3D) | 20.- |
-| RTC battery (CR1220)                   | N/A | 2.- |
+| RTC battery (CR1220)                   | [Digitec]() | ?.- |
 | Alphasense OPC-N3                      | N/A | ~500.- |
-| UPS board                              | N/A |  |
-| UPS batteries (2x 18650)               | N/A |  |
-| DFRobot SIM7600CE-T                    | N/A |  |
+| UPS board                              | [Aliexpress]() | ?.- |
+| UPS batteries (2x 18650)               | [Digitec]() | ?.- |
+| DFRobot SIM7600CE-T                    | [Mouser]() | ?.- |
 | Small components (LEDs, resistors, wires, etc.) | N/A | ~15.- |
 
-## Instructions
+## 2 Assembly guide
 
-### Portable monitor
+### 2.1. Portable monitor
 
-#### Assembly
+### 2.2. Stationary monitor
 
-#### Usage
+## 3 Usage guide
 
-### Stationary monitor
+### 3.1. Portable monitor
 
-#### Assembly
+### 3.2. Stationary monitor
 
-#### Usage
+## 4 Example usage
+
+## 5 Change log
+
+
+
+
+
+
+
 
 ## 3D printed housings
 
