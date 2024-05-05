@@ -2,13 +2,11 @@
 
 ## 1. Overview
 
-This repository allows for building particulate matter monitoring systems using Arduino UNOs and Alphasense OPC-N3 optical particle counter modules.
+This repository allows for building of particulate matter monitoring systems using Arduino UNOs and Alphasense OPC-N3 optical particle counter modules.
 
 There are two versions, a portable monitor which can be worn by a person and a stationary monitor.
 
-A high-level overview of the components required for each is provided below.
-
-### 1.1. Basic bill of materials
+### 1.1. Cost breakdown
 
 #### Portable monitor
 
@@ -20,6 +18,8 @@ A high-level overview of the components required for each is provided below.
 | RTC battery (CR1220)                   | [Digitec]() | ?.- |
 | Alphasense OPC-N3                      | N/A | ~500.- |
 | Small components (LEDs, resistors, wires, etc.) | N/A | ~10.- |
+
+Total: ~???.-
 
 #### Stationary monitor
 
@@ -35,9 +35,11 @@ A high-level overview of the components required for each is provided below.
 | DFRobot SIM7600CE-T                    | [Mouser]() | ?.- |
 | Small components (LEDs, resistors, wires, etc.) | N/A | ~15.- |
 
+Total: ~???.-
+
 ### 1.2. 3D printed housings
 
-CAD files for designed casings can be located in `cad` directory. They are also shown below.
+CAD files for 3D printable enclosures are located in `cad` directory. They are also shown below.
 
 ![Portable housing](/img/Portable_CAD.png)
 
@@ -46,6 +48,12 @@ CAD files for designed casings can be located in `cad` directory. They are also 
 ## 2. Assembly guide
 
 ### 2.1. Portable monitor
+
+#### Step 1: Assembling RTC shield
+
+#### Step 2: Preparing OPC cable
+
+#### Step 3: Final assembly
 
 ### 2.2. Stationary monitor
 
