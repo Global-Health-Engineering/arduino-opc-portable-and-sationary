@@ -1,43 +1,50 @@
-# Portable and stationary PM monitoring with Arduino and Alphasense OPC-N3
+# Portable and stationary PM monitoring with Arduino UNO and Alphasense OPC-N3
 
 ## 1. Overview
 
-This repository allows for building of particulate matter monitoring systems using Arduino UNOs and Alphasense OPC-N3 optical particle counter modules.
+This repository allows for the building of particulate matter monitoring systems using Arduino UNOs and Alphasense OPC-N3 optical particle counter modules.
 
-There are two versions, a portable monitor which can be worn by a person and a stationary monitor.
+There are two variants:
+
+- A portable monitor to measure the personal exposure to particulate matter.
+- A stationary monitor for remote long-term deployment.
+
+The aim of this project was to provide a simple and free guide for others to build their own low-cost PM monitoring systems. The monitors described in this repository can either be copied directly or used as a basis for custom units adapted to specific needs. The project itself is licensed under the the 'CC-BY 4.0' license, however some of the software libraries use different licenses. For more details on this see section 5. of this README file.
 
 ### 1.1. Cost breakdown
 
-#### Portable monitor
+One goal of the project was to keep the cost of the monitors low, so they are built from readily available and affordable components. The only real exception is the Alphasense OPC-N3, this is rather pricey but could be substituted by a cheaper sensor module if not all of its functionality is needed (be aware, replacing the OPC migth require changing the data-read interface).
 
-| Name | Source | Approx. price (CHF) |
-| ---- | ------ | ----------------------- |
-| Arduino UNO (R3/R4 Minima)             | [Mouser](https://www.mouser.ch/ProductDetail/Arduino/ABX00080?qs=ulEaXIWI0c9tbG%2FHj5EzRA%3D%3D) | 18.- |
-| Adafruit Data Logger Shield (Rev. C)   | [Mouser](https://www.mouser.ch/ProductDetail/Adafruit/1141?qs=GURawfaeGuAe9uOWyGs1aw%3D%3D) | 12.- |
+The following tables give a rough breakdown of the costs of each of the monitors. The links are only for reference, sourcing the parts locally is most likely the cheapest option!
+
+**Portable monitor - Total: ~570.-**
+
+| Name | Source | Approx. price (CHF)    |
+| ---- | ------ | ---------------------: |
+| Arduino UNO (R3/R4 Minima)             | [Mouser](https://www.mouser.ch/ProductDetail/Arduino/ABX00080?qs=ulEaXIWI0c9tbG%2FHj5EzRA%3D%3D) | 20.- |
+| Adafruit Data Logger Shield (Rev. C)   | [Mouser](https://www.mouser.ch/ProductDetail/Adafruit/1141?qs=GURawfaeGuAe9uOWyGs1aw%3D%3D) | 15.- |
 | SD card (32 GB)                        | [Mouser](https://www.mouser.ch/ProductDetail/SanDisk/SDSDAA-032G?qs=EgF7oUuTQmpUPFrDZtLtsQ%3D%3D) | 20.- |
-| RTC battery (CR1220)                   | [Digitec]() | ?.- |
+| RTC battery (CR1220)                   | [Digitec](https://www.digitec.ch/en/s1/product/energizer-cr1220-lithium-1-pcs-cr1220-40-mah-batteries-8762860) | 5.- |
 | Alphasense OPC-N3                      | N/A | ~500.- |
 | Small components (LEDs, resistors, wires, etc.) | N/A | ~10.- |
 
-Total: ~???.-
+**Stationary monitor - Total: ~670.-**
 
-#### Stationary monitor
-
-| Name | Source | Approx. price (CHF) |
-| ---- | ------ | ----------------------- |
-| Arduino UNO (R3/R4 Minima)             | [Mouser](https://www.mouser.ch/ProductDetail/Arduino/ABX00080?qs=ulEaXIWI0c9tbG%2FHj5EzRA%3D%3D) | 18.- |
-| Adafruit Data Logger Shield (Rev. C)   | [Mouser](https://www.mouser.ch/ProductDetail/Adafruit/1141?qs=GURawfaeGuAe9uOWyGs1aw%3D%3D) | 12.- |
+| Name | Source | Approx. price (CHF)    |
+| ---- | ------ | ---------------------: |
+| Arduino UNO (R3/R4 Minima)             | [Mouser](https://www.mouser.ch/ProductDetail/Arduino/ABX00080?qs=ulEaXIWI0c9tbG%2FHj5EzRA%3D%3D) | 20.- |
+| Adafruit Data Logger Shield (Rev. C)   | [Mouser](https://www.mouser.ch/ProductDetail/Adafruit/1141?qs=GURawfaeGuAe9uOWyGs1aw%3D%3D) | 15.- |
 | SD card (32 GB)                        | [Mouser](https://www.mouser.ch/ProductDetail/SanDisk/SDSDAA-032G?qs=EgF7oUuTQmpUPFrDZtLtsQ%3D%3D) | 20.- |
-| RTC battery (CR1220)                   | [Digitec]() | ?.- |
+| RTC battery (CR1220)                   | [Digitec](https://www.digitec.ch/en/s1/product/energizer-cr1220-lithium-1-pcs-cr1220-40-mah-batteries-8762860) | 5.- |
 | Alphasense OPC-N3                      | N/A | ~500.- |
-| UPS board                              | [Aliexpress]() | ?.- |
-| UPS batteries (2x 18650)               | [Digitec]() | ?.- |
-| DFRobot SIM7600CE-T                    | [Mouser]() | ?.- |
+| UPS board                              | Aliexpress | ~5.- |
+| UPS batteries (2x 18650)               | [Digitec](https://www.digitec.ch/en/s1/product/samsung-lithium-ion-battery-type-18650-1-pcs-18650-285-mah-batteries-16208254) | 30.- |
+| DFRobot SIM7600CE-T                    | [Mouser](https://www.mouser.ch/ProductDetail/DFRobot/TEL0124?qs=17u8i%2FzlE88MEbXRJuYFsA%3D%3D) | 60.- |
 | Small components (LEDs, resistors, wires, etc.) | N/A | ~15.- |
 
-Total: ~???.-
+The cost breakdowns do **NOT** include a housing for the monitors, as this is very dependant on the exact use case. They could be as simple as a plastic food container. For this project, the housings were 3D-printed using a consumer grade FDM printer. For more details on these, see section 1.2. of this README file.
 
-### 1.2. 3D printed housings
+### 1.2. 3D printed housings --TODO
 
 CAD files for 3D printable enclosures are located in `cad` directory. They are also shown below.
 
@@ -45,9 +52,16 @@ CAD files for 3D printable enclosures are located in `cad` directory. They are a
 
 ![Stationary housing](/img/Stationary_CAD.png)
 
-## 2. Assembly guide
+## 2. Hardware assembly
 
 ### 2.1. Portable monitor
+
+### 2.2. Stationary monitor
+
+
+
+
+
 
 #### Step 1: Assembling RTC shield
 
@@ -55,19 +69,42 @@ CAD files for 3D printable enclosures are located in `cad` directory. They are a
 
 #### Step 3: Final assembly
 
-### 2.2. Stationary monitor
 
-## 3. Usage guide
+
+
+
+
+## 3. Uploading the software
 
 ### 3.1. Portable monitor
 
 ### 3.2. Stationary monitor
 
-## 4. Example usage
+## 4. Using the monitors
 
-## 5. Change log
 
-## Tree
+
+
+
+
+
+
+
+
+## 5. Software library licensing
+
+The code provided in this repository makes use of the libraries listed in the following table. When using any code from this repository, make sure you follow any applicable licenses of the used libraries in addition to the license of the project. A copy of the licenses is provided in the 'LICENSES' directory.
+
+| Library | License |
+| ------- | ------- |
+| [SPI.h](https://github.com/arduino/ArduinoCore-avr/tree/master/libraries/SPI)                     | LGPL v2.1 |
+| [SD.h](https://github.com/arduino-libraries/SD)                                                   | GPL v3    |
+| [RTClib](https://github.com/adafruit/RTClib)                                                      | MIT       | 
+| [SoftwareSerial](https://github.com/arduino/ArduinoCore-avr/tree/master/libraries/SoftwareSerial) | LGPL v2.1 |
+
+## 6. Change log
+
+## Tree --TODO update
 
     .
     ├── CITATION.cff
