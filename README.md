@@ -1,5 +1,8 @@
 # Portable and Stationary PM Monitors with Arduino UNO and Alphasense OPC-N3
 
+
+
+
 ## 1. Overview
 
 This repository allows for the building of particulate matter monitoring systems using Arduino UNOs and Alphasense OPC-N3 optical particle counter modules.
@@ -21,8 +24,7 @@ One goal of the project was to keep the cost of the monitors low, so they are bu
 
 The following tables give a rough breakdown of the costs of each of the monitors. The links are for reference only as sourcing the parts locally is most likely the cheapest option!
 
-**Portable monitor - Total: ~570.-**
-
+`Table 1: Cost breakdown of the portable monitor - total: ~570.-`
 | Name                                   | Source                                                                                                         | Approx. price (CHF)    |
 | -------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ---------------------: |
 | Arduino UNO (R3/R4 Minima)             | [Mouser](https://www.mouser.ch/ProductDetail/Arduino/ABX00080?qs=ulEaXIWI0c9tbG%2FHj5EzRA%3D%3D)               | 20.-                   |
@@ -33,8 +35,7 @@ The following tables give a rough breakdown of the costs of each of the monitors
 | Alphasense OPC-N3                      | N/A                                                                                                            | ~500.-                 |
 | Small components (LEDs, resistors, wires, etc.) | N/A                                                                                                   | ~10.-                  |
 
-**Stationary monitor - Total: ~670.-**
-
+`Table 2: Cost breakdown of the stationary monitor - total: ~670.-`
 | Name                                   | Source                                                                                                                        | Approx. price (CHF)    |
 | -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ---------------------: |
 | Arduino UNO (R3/R4 Minima)             | [Mouser](https://www.mouser.ch/ProductDetail/Arduino/ABX00080?qs=ulEaXIWI0c9tbG%2FHj5EzRA%3D%3D)                              | 20.-                   |
@@ -57,6 +58,9 @@ CAD files for 3D printable enclosures are located in `cad` directory. They are a
 
 ![Stationary housing](/img/Stationary_CAD.png)
 
+
+
+
 ## 2. Hardware assembly
 
 ### 2.1. Portable monitor
@@ -67,21 +71,23 @@ The assembly of the portable monitor is fairly simple, mainly thanks to the Adaf
 
 **Required components:**
 - Adafruit DLS
-- Headers for DLS
-- Connectors (1x 2 pin, 1x 6 pin)
+- Headers for DLS (these should be included with your DLS)
+- Connector pairs (1x 2 pin, 1x 6 pin)
 - Resistors (1x VALUE_1, 1x VALUE_2)
 - Wire (GAUGE)
+- OPC wire
 - Soldering iron
 - Solder (ideally lead-free)
 - Wire stripper
+- Crimping tool (appropriate version for the connectors)
 
 First, the DLS is built up with all the required components and connectors. For the connectors, any type with a pitch of ~2.5 mm works, JST XH connectors are a good choice as they are pretty resistant aginst pull out and fairly compact. Alternatively, the wires _could_ be soldered directly to the DLS, skipping the use of connectores, however this is not recommended as it makes swapping any component a lot more work.
 
-##### Step 1.0: Installing DLS headers
+`Step 1.0: Installing DLS headers`
 
 This step is only required if you bought a DLS that does not have the headers installed yet. For this step, follow the step _Installing the Headers_ in [Adafruit's DLS manual](https://cdn-learn.adafruit.com/downloads/pdf/adafruit-data-logger-shield.pdf).
 
-##### Step 1.1: Soldering the power and OPC connectors
+`Step 1.1: Soldering the power and OPC connectors`
 
 In this step, the 2 pin power connector and 6 pin connector for the OPC are soldered onto the DLS. 
 
@@ -97,7 +103,7 @@ Next, position the OPC connector as shown in the image below. Note that it is po
 
 Again, solder this from the underside, ensuring that no two adjacent pins are shorted.
 
-##### Step 1.2: Soldering the resistors
+`Step 1.2: Soldering the resistors`
 
 In this step, the two resistors for the OPC voltage divider are soldered onto the DLS.
 
@@ -109,7 +115,7 @@ Once positioned correctly, solder the resistor from the underside and trim the l
 
 For the VALUE_2 resistor, position it as shown in the image below and repeat the same process as for the first resistor.
 
-##### Step 1.3: Connecting everything
+`Step 1.3: Connecting everything`
 
 With the connectors and resistors soldered, it is time to connect everything with short bits of wire. The general process for this is to cut an appropriate length of wire, strip the ends, pre-tin them and then solder the wire to the appropriate holes or pins.
 
@@ -117,7 +123,7 @@ The required connections are shown in the image below. It helps to use different
 
 --TODO IMAGE_WIRE_CONNECTONS_DLS_UNDERSIDE
 
-##### Step 1.4: Connecting the LEDs (optional)
+`Step 1.4: Connecting the LEDs (optional)`
 
 In this step, the two LEDs on the DLS are connected. This step is optional.
 
@@ -127,33 +133,35 @@ Connect the holes labeled 'L1' and 'L2' to holes 3 and 4 respectively, as shown 
 
 #### Step 2: Preparing OPC cable
 
-**Required components & tools:**
-- 6 pin connector (matching the one on the DLS)
-- OPC wire
-- Approptiate crimping tool
-- Wire stripper
-
 In this step, the wire to connect the OPC to the DLS is prepared.
 
 --TODO
 
-#### Step 3: Putting it all together
+#### Step 3: Preparing the (USB) power cable
 
-With the DLS and OPC cable prepared, take the Arduino UNO and place the DLS on top. Make sure to line up all of the headers correctly and carefully push the DLS down onto the UNO. Next, insert a CR1220 button cell battery into the holder on the DLS. Connect the OPC using the 6 pin connector.
+--TODO
 
-Congratulations, your the core of your PM monitor is now fully assembled!
+#### Step 4: Putting it all together
+
+With the DLS and OPC cable prepared, take the Arduino UNO and place the DLS on top. Make sure to line up all of the headers correctly and carefully push the DLS down onto the UNO. Next, insert a CR1220 button cell battery into the holder on the DLs and connect the OPC using the 6 pin connector. If you printed the housings, it might be easier to screw the UNO onto its mountng spots before putting the DLS on top and to screw in the OPC before connecting its cable to the DLS.
+
+Congratulations, the core of your PM monitor is now fully assembled! If you printed the housings, mount the OPC it is easier to screw the UNO into this before placing the DLS on top.
 
 ### 2.2. Stationary monitor
 
 The assembly of the stationary is a bit more involved than that of the portable one. The main reason for this is a pin conflict between the Adafruit DLS and the DFRobot SIM shield. Other than this, the process is very similar to that of the portable one.
 
+#### Step 1: Assembling RTC shield
 
+#### Step 2: Preparing the OPC cable
 
+#### Step 3: Preparing the power cable
 
+#### Step 4: Replacing the UNO's headers
 
+#### Step 5: Soldering the SIM shield jumper wire
 
-
-
+#### Step 6: Putting it all together
 
 
 
@@ -167,12 +175,6 @@ The assembly of the stationary is a bit more involved than that of the portable 
 
 
 
-
-
-
-
-
-
 ## 4. Using the monitors
 
 ### 4.1. Portable monitor
@@ -182,13 +184,9 @@ The assembly of the stationary is a bit more involved than that of the portable 
 
 
 
-
-
-
-
 ## 5. Software library licensing
 
-The code provided in this repository makes use of the libraries listed in the following table. When using any code from this repository, make sure you follow any applicable licenses of the used libraries in addition to the license of the project. A copy of the licenses is provided in the 'LICENSES' directory.
+The code provided in this repository makes use of the libraries listed in the following table. When using any code from this repository, make sure you follow any applicable licenses of the libraries in addition to the license of the project. A copy of the licenses is provided in the [LICENSES](LICENSES) directory.
 
 | Library | License |
 | ------- | ------- |
@@ -196,6 +194,9 @@ The code provided in this repository makes use of the libraries listed in the fo
 | [SD.h](https://github.com/arduino-libraries/SD)                                                   | GPL v3    |
 | [RTClib](https://github.com/adafruit/RTClib)                                                      | MIT       | 
 | [SoftwareSerial](https://github.com/arduino/ArduinoCore-avr/tree/master/libraries/SoftwareSerial) | LGPL v2.1 |
+
+
+
 
 ## 6. Change log
 
