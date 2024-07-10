@@ -1,4 +1,4 @@
-# Portable and stationary PM monitoring with Arduino UNO and Alphasense OPC-N3
+# Portable and Stationary PM Monitors with Arduino UNO and Alphasense OPC-N3
 
 ## 1. Overview
 
@@ -7,15 +7,19 @@ This repository allows for the building of particulate matter monitoring systems
 There are two variants:
 
 - A portable monitor to measure the personal exposure to particulate matter.
-- A stationary monitor for remote long-term deployment.
+- A stationary monitor for remote long(er)-term deployment.
 
-The aim of this project was to provide a simple and free guide for others to build their own low-cost PM monitoring systems. The monitors described in this repository can either be copied directly or used as a basis for custom units adapted to specific needs. The project itself is licensed under the the 'CC-BY 4.0' license, however some of the software libraries use different licenses. For more details on this see section 5. of this README file.
+This repository is part of a bachelor's thesis whose goal it was to develope adaptable low-cost PM monitors and provide a simple and free guide for others also looking to build such systems. The monitors described in this repository can either be copied directly or used as the basis for custom units adapted to specific needs. The project itself is licensed under the the 'CC-BY 4.0' license, however some of the software libraries used are licensed with different licenses. For more details on this see section 5. of this README file.
 
-### 1.1. Cost breakdown
+### 1.1. System Overview
 
-One goal of the project was to keep the cost of the monitors low, so they are built from readily available and affordable components. The only real exception is the Alphasense OPC-N3, this is rather pricey but could be substituted by a cheaper sensor module if not all of its functionality is needed (be aware, replacing the OPC migth require changing the data-read interface).
+The core of both the portable and stationary monitors is a stack made up of an Arduino UNO and an Adafruit Data Logger Shield (DLS). The stationary monitor also includes a DFRobot SIM7600CE-T shield for wireless data transmission to Google Drive. Both monitors feature local data storage on an SD card and proper timestamping using the DLS' real-time clock. To interface with the Alphasense OPC-N3 module, a voltage divider is required to drop the SPI lines from 5 V to 3 V. The handy prototyping area of the DLS is used to implement this and also to host all of the required connectors for power, communication and (optional) status LEDs.
 
-The following tables give a rough breakdown of the costs of each of the monitors. The links are only for reference, sourcing the parts locally is most likely the cheapest option!
+### 1.2. Cost breakdown
+
+One goal of the project was to keep the cost of the monitors low, so they are built from readily available and affordable components. The only real exception is the Alphasense OPC-N3, this is rather pricey but could be substituted by a cheaper sensor module if not all of its particular functionality is needed (be aware, replacing the OPC migth require changing the data-read interface).
+
+The following tables give a rough breakdown of the costs of each of the monitors. The links are for reference only as sourcing the parts locally is most likely the cheapest option!
 
 **Portable monitor - Total: ~570.-**
 
@@ -43,9 +47,9 @@ The following tables give a rough breakdown of the costs of each of the monitors
 | DFRobot SIM7600CE-T                    | [Mouser](https://www.mouser.ch/ProductDetail/DFRobot/TEL0124?qs=17u8i%2FzlE88MEbXRJuYFsA%3D%3D)                               | 60.-                   |
 | Small components (LEDs, resistors, wires, etc.) | N/A                                                                                                                  | ~15.-                  |
 
-The cost breakdowns do **NOT** include a housing for the monitors, as this is very dependant on the exact use case. They could be as simple as a plastic food container. For this project, the housings were 3D-printed using a consumer grade FDM printer. For more details on these, see section 1.2. of this README file.
+The cost breakdowns do **NOT** include housings for the monitors, as this is very dependant on the exact use case. They could be as simple as a plastic food container. For this project, the housings were 3D-printed on a consumer grade FDM printer. For more details on these, see section 1.3. of this README file.
 
-### 1.2. 3D printed housings --TODO
+### 1.3. 3D printed housings --TODO
 
 CAD files for 3D printable enclosures are located in `cad` directory. They are also shown below.
 
@@ -57,17 +61,38 @@ CAD files for 3D printable enclosures are located in `cad` directory. They are a
 
 ### 2.1. Portable monitor
 
-The assembly of the portable monitor is fairly simple, mainly thanks to the Adafruit DLS. Only basic soldering skills and a bit of wire crimping are required.
+The assembly of the portable monitor is fairly simple, mainly thanks to the Adafruit DLS. Only basic soldering skills and a bit of wire crimping are required to get a working PM monitor.
 
 #### Step 1: Assembling RTC shield
 
-First, the DLS is prepared with all the required components and connectors
+Required components:
+- Adafruit DLS
+- Headers for DLS
+- Connectors (1x 2 pin, 1x 6 pin)
+- Resistors (1x VALUE_1, 1x VALUE_2)
+- Wire (GAUGE)
+
+First, the DLS is built up with all the required components and connectors. For the connectors, any type with a pitch of ~2.5 mm works, JST XH connectors are a good choice as they are pretty resistant aginst pull out and fairly compact. Alternatively, the wires _could_ be soldered directly to the DLS, skipping the use of connectores, however this is not recommended as it makes swapping any component a lot more work.
+
+**Step 1.0: Installing DLS headers**
+
+This step is only required if you bought a DLS that does not have the headers installed yet. For this step, follow the step _Installing the Headers_ in [Adafruit's DLS manual](https://cdn-learn.adafruit.com/downloads/pdf/adafruit-data-logger-shield.pdf).
+
+**Step 1.1: Soldering the power and OPC connectors**
+
+In this step, the power 2 pin power connector and 6 pin connector for the OPC are soldered onto the DLS. 
+
+**Step 1.2: Soldering the resistors**
+
+**Step 1.3: Connecting everything**
+
+**Step 1.4: Connecting the LEDs (optional)**
 
 #### Step 2: Preparing OPC cable
 
 #### Step 3: Putting it all together
 
-### 2.2. Stationary monitor
+### 2.2. Stationary monitor
 
 The assembly of the stationary is a bit more involved than that of the portable one. The main reason for this is a pin conflict between the Adafruit DLS and the DFRobot SIM shield. Other than this, the process is very similar to that of the portable one.
 
@@ -86,11 +111,22 @@ The assembly of the stationary is a bit more involved than that of the portable 
 
 ### 3.1. Portable monitor
 
-### 3.2. Stationary monitor
+### 3.2. Stationary monitor
+
+
+
+
+
+
+
+
+
 
 ## 4. Using the monitors
 
+### 4.1. Portable monitor
 
+### 4.2. Stationary monitor
 
 
 
