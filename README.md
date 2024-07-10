@@ -1,8 +1,5 @@
 # Portable and Stationary PM Monitors with Arduino UNO and Alphasense OPC-N3
 
-
-
-
 ## 1. Overview
 
 This repository allows for the building of particulate matter monitoring systems using Arduino UNOs and Alphasense OPC-N3 optical particle counter modules.
@@ -50,13 +47,25 @@ The following tables give a rough breakdown of the costs of each of the monitors
 
 The cost breakdowns do **NOT** include housings for the monitors, as this is very dependant on the exact use case. They could be as simple as a plastic food container. For this project, the housings were 3D-printed on a consumer grade FDM printer. For more details on these, see section 1.3. of this README file.
 
-### 1.3. 3D printed housings --TODO
+### 1.3. 3D printed housings
+
+--TODO
+
+
+
+
+
 
 CAD files for 3D printable enclosures are located in `cad` directory. They are also shown below.
 
 ![Portable housing](/img/Portable_CAD.png)
 
 ![Stationary housing](/img/Stationary_CAD.png)
+
+
+
+
+
 
 
 
@@ -153,36 +162,55 @@ The assembly of the stationary is a bit more involved than that of the portable 
 
 #### Step 1: Assembling RTC shield
 
+--TODO
+
 #### Step 2: Preparing the OPC cable
+
+--TODO
 
 #### Step 3: Preparing the power cable
 
+--TODO
+
 #### Step 4: Replacing the UNO's headers
+
+--TODO
 
 #### Step 5: Soldering the SIM shield jumper wire
 
+--TODO
+
 #### Step 6: Putting it all together
 
-
-
+--TODO
 
 ## 3. Uploading the software
 
-### 3.1. Portable monitor
+With the hardware ready, the UNOs need to be flashed with the appropriate code. Before this however, the RTC on the DLS needs to be set correctly. This process is the same for the portable and stationary monitors.
 
-### 3.2. Stationary monitor
+### 3.1. Adjusting the RTC
 
+--TODO
 
+### 3.2. Portable monitor
 
+--TODO
+
+### 3.3. Stationary monitor
+
+--TODO
 
 ## 4. Using the monitors
 
+--TODO
+
 ### 4.1. Portable monitor
+
+--TODO
 
 ### 4.2. Stationary monitor
 
-
-
+--TODO
 
 ## 5. Software library licensing
 
@@ -195,12 +223,9 @@ The code provided in this repository makes use of the libraries listed in the fo
 | [RTClib](https://github.com/adafruit/RTClib)                                                      | MIT       | 
 | [SoftwareSerial](https://github.com/arduino/ArduinoCore-avr/tree/master/libraries/SoftwareSerial) | LGPL v2.1 |
 
-
-
-
 ## 6. Change log
 
-## Tree --TODO update
+## Tree --TODO UPDATE
 
     .
     ├── CITATION.cff
