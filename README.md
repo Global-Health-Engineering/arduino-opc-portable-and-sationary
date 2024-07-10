@@ -65,32 +65,83 @@ The assembly of the portable monitor is fairly simple, mainly thanks to the Adaf
 
 #### Step 1: Assembling RTC shield
 
-Required components:
+**Required components:**
 - Adafruit DLS
 - Headers for DLS
 - Connectors (1x 2 pin, 1x 6 pin)
 - Resistors (1x VALUE_1, 1x VALUE_2)
 - Wire (GAUGE)
+- Soldering iron
+- Solder (ideally lead-free)
+- Wire stripper
 
 First, the DLS is built up with all the required components and connectors. For the connectors, any type with a pitch of ~2.5 mm works, JST XH connectors are a good choice as they are pretty resistant aginst pull out and fairly compact. Alternatively, the wires _could_ be soldered directly to the DLS, skipping the use of connectores, however this is not recommended as it makes swapping any component a lot more work.
 
-**Step 1.0: Installing DLS headers**
+##### Step 1.0: Installing DLS headers
 
 This step is only required if you bought a DLS that does not have the headers installed yet. For this step, follow the step _Installing the Headers_ in [Adafruit's DLS manual](https://cdn-learn.adafruit.com/downloads/pdf/adafruit-data-logger-shield.pdf).
 
-**Step 1.1: Soldering the power and OPC connectors**
+##### Step 1.1: Soldering the power and OPC connectors
 
-In this step, the power 2 pin power connector and 6 pin connector for the OPC are soldered onto the DLS. 
+In this step, the 2 pin power connector and 6 pin connector for the OPC are soldered onto the DLS. 
 
-**Step 1.2: Soldering the resistors**
+First, position the power connector as shown in the image below in the holes labeled 'Vin' and 'GND'. If you're using JST XH connectors you might have to trim a little bit of the plastic housing to clear the tips of the headers on the outside. Do this _very carefully_ with a sharp hobby knife!
 
-**Step 1.3: Connecting everything**
+--TODO IMAGE_POWER_CONNECTOR_POSITION 
 
-**Step 1.4: Connecting the LEDs (optional)**
+Once the header is positioned, solder it from the underside, ensuring that no two adjacent pins are shorted.
+
+Next, position the OPC connector as shown in the image below. Note that it is positioned so that the two pins towards the edge are on the rows labeled '5.0V' and 'GND'.
+
+--TODO IMAGE_OPC_CONNECTOR_POSITION
+
+Again, solder this from the underside, ensuring that no two adjacent pins are shorted.
+
+##### Step 1.2: Soldering the resistors
+
+In this step, the two resistors for the OPC voltage divider are soldered onto the DLS.
+
+First, take the VALUE_1 resistor and bend its legs so that it fits into the holes like shown in the image below.
+
+--TODO IMAGE_VALUE_1_RESISTOR_POSITION
+
+Once positioned correctly, solder the resistor from the underside and trim the legs.
+
+For the VALUE_2 resistor, position it as shown in the image below and repeat the same process as for the first resistor.
+
+##### Step 1.3: Connecting everything
+
+With the connectors and resistors soldered, it is time to connect everything with short bits of wire. The general process for this is to cut an appropriate length of wire, strip the ends, pre-tin them and then solder the wire to the appropriate holes or pins.
+
+The required connections are shown in the image below. It helps to use differently coloured wires to keep a better overview of what needs to be connected where (plus it looks neat).
+
+--TODO IMAGE_WIRE_CONNECTONS_DLS_UNDERSIDE
+
+##### Step 1.4: Connecting the LEDs (optional)
+
+In this step, the two LEDs on the DLS are connected. This step is optional.
+
+Connect the holes labeled 'L1' and 'L2' to holes 3 and 4 respectively, as shown in the image below. This can either be done by two _very_ short bits of wire or more easily by using short bits of the resistors' trimmed off legs.
+
+--TODO IMAGE_OPTIONAL_LED_CONNECTION
 
 #### Step 2: Preparing OPC cable
 
+**Required components & tools:**
+- 6 pin connector (matching the one on the DLS)
+- OPC wire
+- Approptiate crimping tool
+- Wire stripper
+
+In this step, the wire to connect the OPC to the DLS is prepared.
+
+--TODO
+
 #### Step 3: Putting it all together
+
+With the DLS and OPC cable prepared, take the Arduino UNO and place the DLS on top. Make sure to line up all of the headers correctly and carefully push the DLS down onto the UNO. Next, insert a CR1220 button cell battery into the holder on the DLS. Connect the OPC using the 6 pin connector.
+
+Congratulations, your the core of your PM monitor is now fully assembled!
 
 ### 2.2. Stationary monitor
 
