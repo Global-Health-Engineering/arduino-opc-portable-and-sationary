@@ -21,7 +21,7 @@ One goal of the project was to keep the cost of the monitors low, so they are bu
 
 The following tables give a rough breakdown of the costs of each of the monitors. The links are for reference only as sourcing the parts locally is most likely the cheapest option!
 
-`Table 1: Cost breakdown of the portable monitor.`
+`Cost breakdown of the portable monitor.`
 | Name                                   | Source                                                                                                         | Approx. price (CHF)    |
 | -------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ---------------------: |
 | Arduino UNO (R3/R4 Minima)             | [Mouser](https://www.mouser.ch/ProductDetail/Arduino/ABX00080?qs=ulEaXIWI0c9tbG%2FHj5EzRA%3D%3D)               | 20.-                   |
@@ -33,7 +33,7 @@ The following tables give a rough breakdown of the costs of each of the monitors
 | Small components (LEDs, resistors, wires, etc.) | N/A                                                                                                   | ~10.-                  |
 | Total                                  |                                                                                                                | ~570.-                 |
 
-`Table 2: Cost breakdown of the stationary monitor.`
+`Cost breakdown of the stationary monitor.`
 | Name                                   | Source                                                                                                                        | Approx. price (CHF)    |
 | -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ---------------------: |
 | Arduino UNO (R3/R4 Minima)             | [Mouser](https://www.mouser.ch/ProductDetail/Arduino/ABX00080?qs=ulEaXIWI0c9tbG%2FHj5EzRA%3D%3D)                              | 20.-                   |
@@ -78,19 +78,31 @@ CAD files for 3D printable enclosures are located in `cad` directory. They are a
 
 The assembly of the portable monitor is fairly simple, mainly thanks to the Adafruit DLS. Only basic soldering skills and a bit of wire crimping are required to get a working PM monitor.
 
-#### Step 1: Assembling RTC shield
+`Required components`
+| Item                     | Value/note         | Amount    |
+| ------------------------ | ------------------ | :-------: |
+| Adafruit DLS             |                    | 1         |
+| Headers for DLS          | included w/ DLS    | 1 set     |
+| Connector                | 2 pin              | 1 set     |
+| Connector                | 6 pin              | 1 set     |
+| Resistor                 | VALUE_1            | 1         |
+| Resistor                 | VALUE_2            | 1         |
+| Wire                     | GAUGE              | ? colours |
+| OPC cable                | w/ small connector | 1         |
+| Arduino UNO R3/R4 Minima | -                  | 1         |
+| CR1220 battery           | -                  | 1         |
+| SD card                  | max. 32 GB         | 1         |
 
-**Required components:**
-- Adafruit DLS
-- Headers for DLS (these should be included with your DLS)
-- Connector pairs (1x 2 pin, 1x 6 pin)
-- Resistors (1x VALUE_1, 1x VALUE_2)
-- Wire (GAUGE)
-- OPC wire
+
+`Required tools`
 - Soldering iron
 - Solder (ideally lead-free)
-- Wire stripper
-- Crimping tool (appropriate version for the connectors)
+- Soldering stand (optional)
+- Wire cutters
+- Wire strippers
+- Crimping tool (appropriate version for the chosen connectors)
+
+#### Step 1: Assembling RTC shield
 
 First, the DLS is built up with all the required components and connectors. For the connectors, any type with a pitch of ~2.5 mm works, JST XH connectors are a good choice as they are pretty resistant aginst pull out and fairly compact. Alternatively, the wires _could_ be soldered directly to the DLS, skipping the use of connectores, however this is not recommended as it makes swapping any component a lot more work.
 
