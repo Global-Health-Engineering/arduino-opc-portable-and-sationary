@@ -21,7 +21,7 @@ One goal of the project was to keep the cost of the monitors low, so they are bu
 
 The following tables give a rough breakdown of the costs of each of the monitors. The links are for reference only as sourcing the parts locally is most likely the cheapest option!
 
-`Table 1: Cost breakdown of the portable monitor - total: ~570.-`
+`Table 1: Cost breakdown of the portable monitor.`
 | Name                                   | Source                                                                                                         | Approx. price (CHF)    |
 | -------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ---------------------: |
 | Arduino UNO (R3/R4 Minima)             | [Mouser](https://www.mouser.ch/ProductDetail/Arduino/ABX00080?qs=ulEaXIWI0c9tbG%2FHj5EzRA%3D%3D)               | 20.-                   |
@@ -31,8 +31,9 @@ The following tables give a rough breakdown of the costs of each of the monitors
 | Powerbank                              | [Digitec](https://www.digitec.ch/en/s1/product/sbs-power-bank-10000-mah-5-w-37-wh-powerbanks-19791017)         | 35.-                   |
 | Alphasense OPC-N3                      | N/A                                                                                                            | ~500.-                 |
 | Small components (LEDs, resistors, wires, etc.) | N/A                                                                                                   | ~10.-                  |
+| Total                                  |                                                                                                                | ~570.-                 |
 
-`Table 2: Cost breakdown of the stationary monitor - total: ~670.-`
+`Table 2: Cost breakdown of the stationary monitor.`
 | Name                                   | Source                                                                                                                        | Approx. price (CHF)    |
 | -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ---------------------: |
 | Arduino UNO (R3/R4 Minima)             | [Mouser](https://www.mouser.ch/ProductDetail/Arduino/ABX00080?qs=ulEaXIWI0c9tbG%2FHj5EzRA%3D%3D)                              | 20.-                   |
@@ -44,6 +45,7 @@ The following tables give a rough breakdown of the costs of each of the monitors
 | UPS batteries (2x 18650)               | [Digitec](https://www.digitec.ch/en/s1/product/samsung-lithium-ion-battery-type-18650-1-pcs-18650-285-mah-batteries-16208254) | 30.-                   |
 | DFRobot SIM7600CE-T                    | [Mouser](https://www.mouser.ch/ProductDetail/DFRobot/TEL0124?qs=17u8i%2FzlE88MEbXRJuYFsA%3D%3D)                               | 60.-                   |
 | Small components (LEDs, resistors, wires, etc.) | N/A                                                                                                                  | ~15.-                  |
+| Total                                  |                                                                                                                               | ~670.-                 |
 
 The cost breakdowns do **NOT** include housings for the monitors, as this is very dependant on the exact use case. They could be as simple as a plastic food container. For this project, the housings were 3D-printed on a consumer grade FDM printer. For more details on these, see section 1.3. of this README file.
 
