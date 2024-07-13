@@ -1,15 +1,15 @@
-# Portable and Stationary PM Monitors with Arduino UNO and Alphasense OPC-N3
+# Portable and Stationary PM Monitors using Arduino UNO and Alphasense OPC-N3
 
 ## 1. Overview
 
-This repository allows for the building of particulate matter monitoring systems using Arduino UNOs and Alphasense OPC-N3 optical particle counter modules.
+This repository provides instructions for the building of particulate matter monitoring systems using the Arduino UNO and Alphasense OPC-N3 optical particle counter module.
 
 There are two variants:
 
 - A portable monitor to measure the personal exposure to particulate matter.
 - A stationary monitor for remote long(er)-term deployment.
 
-This repository is part of a bachelor's thesis whose goal it was to develope adaptable low-cost PM monitors and provide a simple and free guide for others also looking to build such systems. The monitors described in this repository can either be copied directly or used as the basis for custom units adapted to specific needs. The project itself is licensed under the the 'CC-BY 4.0' license, however some of the software libraries used are licensed with different licenses. For more details on this see section 5. of this README file.
+This repository is part of a bachelor's thesis whose goal it was to develope adaptable low-cost PM monitors and provide a simple and free guide for others also looking to build such systems. The monitors described in this repository can either be copied directly or used as the basis for custom units adapted to specific needs. The project itself is licensed under the the 'CC-BY 4.0' license, however some of the software libraries used are come with different licenses. For more details on this, see section 5. of this README file.
 
 ### 1.1. System Overview
 
@@ -17,7 +17,7 @@ The core of both the portable and stationary monitors is a stack made up of an A
 
 ### 1.2. Cost breakdown
 
-One goal of the project was to keep the cost of the monitors low, so they are built from readily available and affordable components. The only real exception is the Alphasense OPC-N3, this is rather pricey but could be substituted by a cheaper sensor module if not all of its particular functionality is needed (be aware, replacing the OPC migth require changing the data-read interface).
+One goal of the project was to keep the cost of the monitors low, so they are built from readily available and affordable components. The only real exception is the Alphasense OPC-N3. This is rather pricey but could be substituted by a cheaper sensor module if not all of its particular functionality is needed (be aware, replacing the OPC migth require changing the hardware and software interface).
 
 The following tables give a rough breakdown of the costs of each of the monitors. The links are for reference only as sourcing the parts locally is most likely the cheapest option!
 
@@ -31,7 +31,7 @@ The following tables give a rough breakdown of the costs of each of the monitors
 | Powerbank                              | [Digitec](https://www.digitec.ch/en/s1/product/sbs-power-bank-10000-mah-5-w-37-wh-powerbanks-19791017)         | 35.-                   |
 | Alphasense OPC-N3                      | N/A                                                                                                            | ~500.-                 |
 | Small components (LEDs, resistors, wires, etc.) | N/A                                                                                                   | ~10.-                  |
-| Total                                  |                                                                                                                | ~570.-                 |
+| **Total**                              |                                                                                                                | ~570.-                 |
 
 `Cost breakdown of the stationary monitor.`
 | Name                                   | Source                                                                                                                        | Approx. price (CHF)    |
@@ -45,9 +45,9 @@ The following tables give a rough breakdown of the costs of each of the monitors
 | UPS batteries (2x 18650)               | [Digitec](https://www.digitec.ch/en/s1/product/samsung-lithium-ion-battery-type-18650-1-pcs-18650-285-mah-batteries-16208254) | 30.-                   |
 | DFRobot SIM7600CE-T                    | [Mouser](https://www.mouser.ch/ProductDetail/DFRobot/TEL0124?qs=17u8i%2FzlE88MEbXRJuYFsA%3D%3D)                               | 60.-                   |
 | Small components (LEDs, resistors, wires, etc.) | N/A                                                                                                                  | ~15.-                  |
-| Total                                  |                                                                                                                               | ~670.-                 |
+| **Total**                              |                                                                                                                               | ~670.-                 |
 
-The cost breakdowns do **NOT** include housings for the monitors, as this is very dependant on the exact use case. They could be as simple as a plastic food container. For this project, the housings were 3D-printed on a consumer grade FDM printer. For more details on these, see section 1.3. of this README file.
+The cost breakdowns do ***NOT*** include housings for the monitors, as this is very dependant on the exact use case. They could be as simple as a plastic food container. For this project, the housings were 3D-printed on a consumer grade FDM printer. For more details on these, see section 1.3. of this README file.
 
 ### 1.3. 3D printed housings
 
@@ -78,10 +78,10 @@ CAD files for 3D printable enclosures are located in `cad` directory. They are a
 
 The assembly of the portable monitor is fairly simple, mainly thanks to the Adafruit DLS. Only basic soldering skills and a bit of wire crimping are required to get a working PM monitor.
 
-`Required components`
-| Item                     | Value/note         | Amount    |
+`BOM for the portable monitor --TODO order`
+| Item                     | Value/note         | Qty       |
 | ------------------------ | ------------------ | :-------: |
-| Adafruit DLS             |                    | 1         |
+| Adafruit DLS             | Rev. C             | 1         |
 | Headers for DLS          | included w/ DLS    | 1 set     |
 | Connector                | 2 pin              | 1 set     |
 | Connector                | 6 pin              | 1 set     |
@@ -92,7 +92,6 @@ The assembly of the portable monitor is fairly simple, mainly thanks to the Adaf
 | Arduino UNO R3/R4 Minima | -                  | 1         |
 | CR1220 battery           | -                  | 1         |
 | SD card                  | max. 32 GB         | 1         |
-
 
 `Required tools`
 - Soldering iron
@@ -172,7 +171,37 @@ Congratulations, the core of your PM monitor is now fully assembled! If you prin
 
 ### 2.2. Stationary monitor
 
-The assembly of the stationary is a bit more involved than that of the portable one. The main reason for this is a pin conflict between the Adafruit DLS and the DFRobot SIM shield. Other than this, the process is very similar to that of the portable one.
+The assembly of the stationary is a bit more involved than that of the portable one. The main reason for this is a pin conflict between the Adafruit DLS and the DFRobot SIM shield. Other than this, the process is very similar to that of the portable monitor.
+
+`BOM for the stationary monitor --TODO order`
+| Item                     | Value/note         | Qty       |
+| ------------------------ | ------------------ | :-------: |
+| Adafruit DLS             | Rev. C             | 1         |
+| Headers for DLS          | included w/ DLS    | 1 set     |
+| Connector                | 2 pin              | 1 set     |
+| Connector                | 6 pin              | 1 set     |
+| Resistor                 | VALUE_1            | 1         |
+| Resistor                 | VALUE_2            | 1         |
+| Wire                     | GAUGE              | ? colours |
+| OPC cable                | w/ small connector | 1         |
+| Arduino UNO R3/R4 Minima | -                  | 1         |
+| CR1220 battery           | -                  | 1         |
+| SD card                  | max. 32 GB         | 1         |
+| DFRobot SIM7600CE-T      | -                  | 1         |
+| LED                      | Red                | 1         |
+| LED                      | Green              | 1         |
+| LED                      | Blue               | 1         |
+| LED headers              | 3 pin              | 2         |
+| SIM card                 | with data subscription| 1      |
+| Stacking headers         | for Arduino UNO    | 1         |
+
+`Required tools`
+- Soldering iron
+- Solder (ideally lead-free)
+- Soldering stand (optional)
+- Wire cutters
+- Wire strippers
+- Crimping tool (appropriate version for the chosen connectors)
 
 #### Step 1: Assembling RTC shield
 
