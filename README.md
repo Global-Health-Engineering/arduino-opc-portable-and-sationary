@@ -57,7 +57,7 @@ The cost breakdowns do **NOT** include housings for the monitors, as this is ver
 
 
 
-The files for the 3D-printed housings can be found in the [cad](cad) directory. This also contains some simplified CAD models of the UNO and OPC to allow you to design your own housings.
+The files for the 3D-printed housings can be found in the [`cad`](cad) directory. This also contains some simplified CAD models of the UNO and OPC to allow you to design your own housings.
 
 
 
@@ -264,7 +264,7 @@ With the hardware ready, the UNOs need to be flashed with the appropriate firmwa
 
 ## 5. Software library licensing
 
-The code provided in this repository makes use of the libraries listed in the following table. When using any code from this repository, make sure you follow any applicable licenses of the libraries in addition to the license of the project. A copy of the licenses is provided in the [LICENSES](LICENSES) directory.
+The code provided in this repository makes use of the libraries listed in the following table. When using any code from this repository, make sure you follow any applicable licenses of the libraries in addition to the license of the project. A copy of the licenses is provided in the [`LICENSES`](LICENSES) directory.
 
 | Library | License |
 | ------- | ------- |
