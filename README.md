@@ -96,7 +96,7 @@ The assembly of the portable monitor is fairly simple, mainly thanks to the Adaf
 | Resistor                 | VALUE_2            | 1         |
 | Wire                     | GAUGE              | ? colours |
 | OPC cable                | w/ small connector | 1         |
-| Arduino UNO R3/R4 Minima | -                  | 1         |
+| Arduino UNO              | R3/R4 Minima       | 1         |
 | CR1220 battery           | -                  | 1         |
 | SD card                  | max. 32 GB         | 1         |
 
@@ -191,7 +191,7 @@ The assembly of the stationary is a bit more involved than that of the portable 
 | Resistor                 | VALUE_2            | 1         |
 | Wire                     | GAUGE              | ? colours |
 | OPC cable                | w/ small connector | 1         |
-| Arduino UNO R3/R4 Minima | -                  | 1         |
+| Arduino UNO              | R3/R4 Minima       | 1         |
 | CR1220 battery           | -                  | 1         |
 | SD card                  | max. 32 GB         | 1         |
 | DFRobot SIM7600CE-T      | -                  | 1         |
@@ -268,10 +268,10 @@ The code provided in this repository makes use of the libraries listed in the fo
 
 | Library | License |
 | ------- | ------- |
-| [SPI.h](https://github.com/arduino/ArduinoCore-avr/tree/master/libraries/SPI)                     | LGPL v2.1 |
-| [SD.h](https://github.com/arduino-libraries/SD)                                                   | GPL v3    |
-| [RTClib](https://github.com/adafruit/RTClib)                                                      | MIT       | 
-| [SoftwareSerial](https://github.com/arduino/ArduinoCore-avr/tree/master/libraries/SoftwareSerial) | LGPL v2.1 |
+| [SPI.h](https://github.com/arduino/ArduinoCore-avr/tree/master/libraries/SPI)                     | `LGPL v2.1` |
+| [SD.h](https://github.com/arduino-libraries/SD)                                                   | `GPL v3`    |
+| [RTClib](https://github.com/adafruit/RTClib)                                                      | `MIT`       | 
+| [SoftwareSerial](https://github.com/arduino/ArduinoCore-avr/tree/master/libraries/SoftwareSerial) | `LGPL v2.1` |
 
 ## 6. Change log
 
