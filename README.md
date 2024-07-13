@@ -109,11 +109,11 @@ First, the DLS is built up with all the required components and connectors. For 
 
 This step is only required if you bought a DLS that does not have the headers installed yet. For this step, follow the step _Installing the Headers_ in [Adafruit's DLS manual](https://cdn-learn.adafruit.com/downloads/pdf/adafruit-data-logger-shield.pdf).
 
-`Step 1.1: Soldering the power and OPC connectors`
+##### Step 1.1: Soldering the power and OPC connectors
 
 In this step, the 2 pin power connector and 6 pin connector for the OPC are soldered onto the DLS. 
 
-First, position the power connector as shown in the image below in the holes labeled 'Vin' and 'GND'. If you're using JST XH connectors you might have to trim a little bit of the plastic housing to clear the tips of the headers on the outside. Do this _very carefully_ with a sharp hobby knife!
+First, position the power connector as shown in the image below in the holes labeled `Vin` and `GND`. If you're using JST XH connectors you might have to trim a little bit of the plastic housing to clear the tips of the headers on the outside. Do this _very carefully_ with a sharp hobby knife!
 
 --TODO IMAGE_POWER_CONNECTOR_POSITION 
 
