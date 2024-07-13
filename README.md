@@ -47,13 +47,17 @@ The following tables give a rough breakdown of the costs of each of the monitors
 | Small components (LEDs, resistors, wires, etc.) | N/A                                                                                                                  | ~15.-                  |
 | **Total**                              |                                                                                                                               | ~670.-                 |
 
-The cost breakdowns do ***NOT*** include housings for the monitors, as this is very dependant on the exact use case. They could be as simple as a plastic food container. For this project, the housings were 3D-printed on a consumer grade FDM printer. For more details on these, see section 1.3. of this README file.
+The cost breakdowns do **NOT** include housings for the monitors, as this is very dependant on the exact use case. They could be as simple as a plastic food container. For this project, the housings were 3D-printed on a consumer grade FDM printer. For more details on these, see section 1.3. of this README file.
 
 ### 1.3. 3D printed housings
 
 --TODO
 
 
+
+
+
+The files for the 3D-printed housings can be found in the [cad](cad) directory. This also contains some simplified CAD models of the UNO and OPC to allow you to design your own housings.
 
 
 
@@ -105,39 +109,39 @@ The assembly of the portable monitor is fairly simple, mainly thanks to the Adaf
 
 First, the DLS is built up with all the required components and connectors. For the connectors, any type with a pitch of ~2.5 mm works, JST XH connectors are a good choice as they are pretty resistant aginst pull out and fairly compact. Alternatively, the wires _could_ be soldered directly to the DLS, skipping the use of connectores, however this is not recommended as it makes swapping any component a lot more work.
 
-`Step 1.0: Installing DLS headers`
+##### Step 1.0: Installing DLS headers
 
-This step is only required if you bought a DLS that does not have the headers installed yet. For this step, follow the step _Installing the Headers_ in [Adafruit's DLS manual](https://cdn-learn.adafruit.com/downloads/pdf/adafruit-data-logger-shield.pdf).
+This step is only required if you bought a DLS that does not have the headers installed yet. For this step, follow the step `Installing the Headers` in [Adafruit's DLS manual](https://cdn-learn.adafruit.com/downloads/pdf/adafruit-data-logger-shield.pdf).
 
 ##### Step 1.1: Soldering the power and OPC connectors
 
 In this step, the 2 pin power connector and 6 pin connector for the OPC are soldered onto the DLS. 
 
-First, position the power connector as shown in the image below in the holes labeled `Vin` and `GND`. If you're using JST XH connectors you might have to trim a little bit of the plastic housing to clear the tips of the headers on the outside. Do this _very carefully_ with a sharp hobby knife!
+First, position the power connector as shown in the image below in the holes labeled `Vin` and `GND`. If you're using JST XH connectors you might have to trim a little bit of the plastic housing to clear the tips of the headers on the outside. Do this _very carefully_ with a sharp hobby knife.
 
 --TODO IMAGE_POWER_CONNECTOR_POSITION 
 
 Once the header is positioned, solder it from the underside, ensuring that no two adjacent pins are shorted.
 
-Next, position the OPC connector as shown in the image below. Note that it is positioned so that the two pins towards the edge are on the rows labeled '5.0V' and 'GND'.
+Next, position the OPC connector as shown in the image below. Note that it is positioned so that the two pins towards the edge are on the rows labeled `5.0V` and `GND`.
 
 --TODO IMAGE_OPC_CONNECTOR_POSITION
 
 Again, solder this from the underside, ensuring that no two adjacent pins are shorted.
 
-`Step 1.2: Soldering the resistors`
+##### Step 1.2: Soldering the resistors
 
 In this step, the two resistors for the OPC voltage divider are soldered onto the DLS.
 
-First, take the VALUE_1 resistor and bend its legs so that it fits into the holes like shown in the image below.
+First, take the `VALUE_1` resistor and bend its legs so that it fits into the holes like shown in the image below.
 
 --TODO IMAGE_VALUE_1_RESISTOR_POSITION
 
 Once positioned correctly, solder the resistor from the underside and trim the legs.
 
-For the VALUE_2 resistor, position it as shown in the image below and repeat the same process as for the first resistor.
+For the `VALUE_2` resistor, position it as shown in the image below and repeat the same process as for the first resistor.
 
-`Step 1.3: Connecting everything`
+##### Step 1.3: Connecting everything
 
 With the connectors and resistors soldered, it is time to connect everything with short bits of wire. The general process for this is to cut an appropriate length of wire, strip the ends, pre-tin them and then solder the wire to the appropriate holes or pins.
 
@@ -145,11 +149,11 @@ The required connections are shown in the image below. It helps to use different
 
 --TODO IMAGE_WIRE_CONNECTONS_DLS_UNDERSIDE
 
-`Step 1.4: Connecting the LEDs (optional)`
+##### Step 1.4: Connecting the LEDs (optional)
 
 In this step, the two LEDs on the DLS are connected. This step is optional.
 
-Connect the holes labeled 'L1' and 'L2' to holes 3 and 4 respectively, as shown in the image below. This can either be done by two _very_ short bits of wire or more easily by using short bits of the resistors' trimmed off legs.
+Connect the holes labeled `L1` and `L2` to holes `3` and `4` respectively, as shown in the image below. This can either be done by two _very_ short bits of wire or more easily by using bits of the resistors' trimmed off legs. You can do the connection on either side of the DLS.
 
 --TODO IMAGE_OPTIONAL_LED_CONNECTION
 
@@ -167,7 +171,7 @@ In this step, the wire to connect the OPC to the DLS is prepared.
 
 With the DLS and OPC cable prepared, take the Arduino UNO and place the DLS on top. Make sure to line up all of the headers correctly and carefully push the DLS down onto the UNO. Next, insert a CR1220 button cell battery into the holder on the DLs and connect the OPC using the 6 pin connector. If you printed the housings, it might be easier to screw the UNO onto its mountng spots before putting the DLS on top and to screw in the OPC before connecting its cable to the DLS.
 
-Congratulations, the core of your PM monitor is now fully assembled! If you printed the housings, mount the OPC it is easier to screw the UNO into this before placing the DLS on top.
+Congratulations, the core of your PM monitor is now fully assembled! Next, have a look at section 3. of this README file to finish the monitors by uploading the firmware.
 
 ### 2.2. Stationary monitor
 
@@ -229,7 +233,7 @@ The assembly of the stationary is a bit more involved than that of the portable 
 
 ## 3. Uploading the software
 
-With the hardware ready, the UNOs need to be flashed with the appropriate code. Before this however, the RTC on the DLS needs to be set correctly. This process is the same for the portable and stationary monitors.
+With the hardware ready, the UNOs need to be flashed with the appropriate firmware. However, before doing so the RTC on the DLS needs to be set correctly. This process is the same for the portable and stationary monitors.
 
 ### 3.1. Adjusting the RTC
 
