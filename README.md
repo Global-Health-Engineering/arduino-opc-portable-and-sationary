@@ -70,10 +70,13 @@ CAD files for 3D printable enclosures are located in `cad` directory. They are a
 
 
 
+#### 1.3.1. Portable monitor
+
+The housing for the portable monitor is designed to be used with a 'GoPro Chesty' harness. 
 
 
 
-
+#### 1.3.2. Stationary monitor
 
 
 ## 2. Hardware assembly
@@ -314,4 +317,3 @@ The code provided in this repository makes use of the libraries listed in the fo
         └── Stationary
             ├── README.md
             └── Stationary_v1-0-0.ino
-
