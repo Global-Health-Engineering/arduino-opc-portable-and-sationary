@@ -1,4 +1,4 @@
-# Portable monitor core assembly
+# Assembly of the portable monitor core
 
 --TODO IMAGE_PORTABLE_CORE_OVERVIEW
 
