@@ -9,11 +9,15 @@ There are two variants:
 - A portable monitor to measure the personal exposure to particulate matter.
 - A stationary monitor for remote long(er)-term deployment.
 
-This repository is part of a bachelor's thesis whose goal it was to develope adaptable low-cost PM monitors and provide a simple and free guide for others also looking to build such systems. The monitors described in this repository can either be copied directly or used as the basis for custom units adapted to specific needs. The project itself is licensed under the the [`CC-BY 4.0`](LICENSE.md) license, however some of the software libraries used are come with different licenses. For more details on this, see [`section 5`](#5-software-library-licensing) of this README file.
+This repository is part of a bachelor's thesis whose goal it was to develope adaptable low-cost PM monitors and provide a simple and free guide for others also looking to build such systems. The monitors described in this repository can either be copied directly or used as the basis for custom units adapted to specific needs. The project itself is licensed under the the [CC-BY 4.0](LICENSE.md) license, however some of the software libraries used are come with different licenses. For more details on this, see [section 5](#5-software-library-licensing) of this README file.
 
 ### 1.1. System Overview
 
 The core of both the portable and stationary monitors is a stack made up of an Arduino UNO and an Adafruit Data Logger Shield (DLS). The stationary monitor also includes a DFRobot SIM7600CE-T shield for wireless data transmission to Google Drive. Both monitors feature local data storage on an SD card and proper timestamping using the DLS' real-time clock. To interface with the Alphasense OPC-N3 module, a voltage divider is required to drop the SPI lines from 5 V to 3 V. The handy prototyping area of the DLS is used to implement this and also to host all of the required connectors for power, communication and (optional) status LEDs.
+
+--TODO IMAGE_PORTABLE_SCHEMATIC_OVERVIEW
+
+--TODO IMAGE_STATIONARY_SCHEMATIC_OVERVIEW
 
 ### 1.2. Cost breakdown
 
@@ -21,7 +25,8 @@ One goal of the project was to keep the cost of the monitors low, so they are bu
 
 The following tables give a rough breakdown of the costs of each of the monitors. The links are for reference only as sourcing the parts locally is most likely the cheapest option!
 
-`Cost breakdown of the portable monitor.`
+#### Cost breakdown of the portable monitor.
+
 | Name                                   | Source                                                                                                         | Approx. price (CHF)    |
 | -------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ---------------------: |
 | Arduino UNO (R3/R4 Minima)             | [Mouser](https://www.mouser.ch/ProductDetail/Arduino/ABX00080?qs=ulEaXIWI0c9tbG%2FHj5EzRA%3D%3D)               | 20.-                   |
@@ -33,7 +38,7 @@ The following tables give a rough breakdown of the costs of each of the monitors
 | Small components (LEDs, resistors, wires, etc.) | N/A                                                                                                   | ~10.-                  |
 | **Total**                              |                                                                                                                | ~570.-                 |
 
-`Cost breakdown of the stationary monitor.`
+#### Cost breakdown of the stationary monitor.
 | Name                                   | Source                                                                                                                        | Approx. price (CHF)    |
 | -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ---------------------: |
 | Arduino UNO (R3/R4 Minima)             | [Mouser](https://www.mouser.ch/ProductDetail/Arduino/ABX00080?qs=ulEaXIWI0c9tbG%2FHj5EzRA%3D%3D)                              | 20.-                   |
@@ -47,7 +52,7 @@ The following tables give a rough breakdown of the costs of each of the monitors
 | Small components (LEDs, resistors, wires, etc.) | N/A                                                                                                                  | ~15.-                  |
 | **Total**                              |                                                                                                                               | ~670.-                 |
 
-The cost breakdowns do **NOT** include housings for the monitors, as this is very dependant on the exact use case. They could be as simple as a plastic food container. For this project, the housings were 3D-printed on a consumer grade FDM printer. For more details on these, see [`section 1.3.`](#13-3d-printed-housings) of this README file.
+The cost breakdowns do **NOT** include housings for the monitors, as this is very dependant on the exact use case. They could be as simple as a plastic food container. For this project, the housings were 3D-printed on a consumer grade FDM printer. For more details on these, see [section 1.3.](#13-3d-printed-housings) of this README file.
 
 ### 1.3. 3D printed housings
 
@@ -81,7 +86,7 @@ The housing for the portable monitor is designed to be used with a 'GoPro Chesty
 
 ## 2. Hardware assembly
 
-### 2.1. Portable monitor
+--TODO write and add hyperlinks to assembly guides in docs folder
 
 
 
@@ -145,6 +150,8 @@ The assembly of the stationary is a bit more involved than that of the portable 
 
 ## 3. Uploading the software
 
+--TODO write and add hyperlinks to firmware uploady guides in docs folder
+
 With the hardware ready, the UNOs need to be flashed with the appropriate firmware. However, before doing so the RTC on the DLS needs to be set correctly. This process is the same for the portable and stationary monitors.
 
 ### 3.1. Adjusting the RTC
@@ -160,6 +167,8 @@ With the hardware ready, the UNOs need to be flashed with the appropriate firmwa
 --TODO
 
 ## 4. Using the monitors
+
+--TODO write and add hyperlinks to files in docs folder
 
 --TODO
 
