@@ -1,4 +1,4 @@
-# OPC cable assembly guide
+# Assembly of the OPC cable
 
 --TODO IMAGE_OPC_CABLE_OVERVIEW
 
