@@ -8,9 +8,19 @@ This guide provides instructions for creating a cable to connect the Alphasense 
 
 --TODO parts list
 
+| Item| Value/note| Qty|
+| ----| ----------| :-:|
+| OPC connector| | 1|
+| Wire| GAUGE| |
+| Arduino connector| 6 pin| 1 set (male & female)|
+
+
+
+
 ### Required tools
 
 --TODO required tools
 
+## Step 1: OPC side connector
 
-
+## Step2: Arduino side connector
