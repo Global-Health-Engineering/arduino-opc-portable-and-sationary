@@ -6,27 +6,33 @@ The assembly of the portable monitor core is fairly simple thanks to the Adafrui
 
 ### Parts list
 
-| Item                     | Value/note         | Qty                    |
-| ------------------------ | ------------------ | :-------:              |
-| Arduino UNO              | R3/R4 Minima       | 1                      |
-| Adafruit DLS             | Rev. C             | 1                      |
-| Headers for DLS          | included w/ DLS    | 1 set                  |
-| Connector                | 2 pin              | 1 set (male & female)  |
-| Connector                | 6 pin              | 1 set (male & female)  |
-| Resistor                 | VALUE_1            | 1                      |
-| Resistor                 | VALUE_2            | 1                      |
-| Wire                     | GAUGE              | ? colours              |
-| CR1220 battery           | -                  | 1                      |
-| SD card                  | max. 32 GB         | 1                      |
+| Item                     | Value/note             | Qty                   |
+| ------------------------ | ---------------------- | :-------------------: |
+| Arduino UNO              | R3/R4 Minima           | 1                     |
+| Adafruit DLS             | Rev. C                 | 1                     |
+| Headers for DLS          | included w/ DLS        | 1 complete set        |
+| Connector                | 2 pin                  | 1 set (male & female) |
+| Connector                | 6 pin                  | 1 set (male & female) |
+| OPC connector/cable      | 6 pin Molex Pico-Clasp | 1 (male)              |
+| Resistor                 | VALUE_1                | 1                     |
+| Resistor                 | VALUE_2                | 1                     |
+| Wire                     | GAUGE                  | ? colours             |
+| CR1220 battery           | -                      | 1                     |
+| SD card                  | max. 32 GB             | 1                     |
 
-For the connectors, any type with a pitch of ~2.5 mm works, JST XH connectors are a good choice as they are pretty resistant aginst pull out and fairly compact. Alternatively, the wires _could_ be soldered directly to the DLS, skipping the use of connectores, however this is not recommended as it makes swapping any component a lot more work.
+- For the connectors on the DLS, any type with a pitch of ~2.5 mm works, JST XH connectors are a good choice as they are pretty resistant aginst pull out and fairly compact. Alternatively, the wires _could_ be soldered directly to the DLS, skipping the use of connectores, however this is not recommended as it makes swapping any component a lot more work.
 
 --TODO IMAGE_JST_CONNECTOR_2_AND_6_PIN
+
+- For the OPC you need a 6 pin Molex Pico-Clasp connector. This is a _tiny_ connector and you ideally need a special (and expensive) crimping tool to properly crimp these pins. It is easier to buy a pre-crimped cable set which already has the connector on one side (--TODO ADD_EXAMPLE_LINK).
+
+--TODO IMAGE_OPC_CABLE_BLANK
 
 ### Required tools
 
 - Soldering iron
 - Solder (ideally lead-free)
+- PPE (safety glasses/goggles and mask/respirator)
 - Wire cutters
 - Wire strippers
 - Crimping tool (appropriate version for the chosen connectors)
@@ -119,9 +125,13 @@ In this optional step, the two status LEDs on the DLS are connected.
 
 --TODO instructions for making USB power cable
 
-## Step 3: Putting it all together
+## Step 3: Preparing the OPC cable
 
-With the DLS and power cable prepared, take the Arduino UNO and place the DLS on top. Make sure to line up all of the headers correctly and carefully push the DLS down onto the UNO. Next, insert a CR1220 button cell battery and the SD card into their slots on the DLS and connect the OPC using the 6 pin connector and OPC cable (a guide for makin this can be found here --TODO LINK_OPC_CABLE_ASSEMBLY_GUIDE).
+--TODO instructions for making OPC cable
+
+## Step 4: Putting it all together
+
+With the DLS, power cable and OPC cable prepared, take the Arduino UNO and place the DLS on top. Make sure to line up all of the headers correctly and carefully push the DLS down onto the UNO. Next, insert a CR1220 button cell battery and the SD card into their slots on the DLS and connect the OPC using the 6 pin connector and OPC cable.
 
 If you printed the housings, it might be easier to screw the UNO onto its mountng spots before putting the DLS on top and to screw in the OPC before connecting its cable to the DLS.
 
