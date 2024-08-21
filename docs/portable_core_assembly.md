@@ -24,7 +24,7 @@ The assembly of the portable monitor core is fairly simple thanks to the Adafrui
 
 --TODO IMAGE_JST_CONNECTOR_2_AND_6_PIN
 
-- For the OPC you need a 6 pin Molex Pico-Clasp connector. This is a _tiny_ connector and you ideally need a special (and expensive) crimping tool to properly crimp these pins. It is easier to buy a pre-crimped cable set which already has the connector on one side (--TODO ADD_EXAMPLE_LINK).
+- For the OPC you need a 6 pin Molex Pico-Clasp connector. This is a _tiny_ connector and you should ideally use a special (and expensive) crimping tool to properly crimp these pins. It is easier to buy a pre-crimped cable set which already has the connector on one side (--TODO ADD_EXAMPLE_LINK).
 
 --TODO IMAGE_OPC_CABLE_BLANK
 
