@@ -90,7 +90,7 @@ Instructions for the assembly, setup and usage of the monitors can be found in t
 
 | Portable monitor                                      | Stationary monitor                                      |
 | :---------------------------------------------------: | :-----------------------------------------------------: |
-| [`Assembly`](docs/portable_core_assembly_md)          | [`Assembly`](docs/stationary_core_assembly_md)          |
+| [`Assembly`](docs/portable_core_assembly.md)          | [`Assembly`](docs/stationary_core_assembly.md)          |
 | [`Firmware upload`](docs/portable_firmware_upload.md) | [`Firmware upload`](docs/stationary_firmware_upload.md) |
 | [`Usage`](docs/portable_usage.md)                     | [`Usage`](docs/stationary_usage.md)                      |
 
