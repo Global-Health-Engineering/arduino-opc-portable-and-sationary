@@ -1,10 +1,10 @@
-# Assembly of the portable monitor core
+# Assembly of the Portable Monitor Core
 
 The assembly of the portable monitor core is fairly simple thanks to the Adafruit DLS. Only basic soldering skills and a bit of wire crimping are required to complete it.
 
 --TODO IMAGE_PORTABLE_CORE_OVERVIEW
 
-### Parts list
+### Parts List
 
 | Item                     | Value/note             | Qty                   |
 | ------------------------ | ---------------------- | :-------------------: |
@@ -28,7 +28,7 @@ The assembly of the portable monitor core is fairly simple thanks to the Adafrui
 
 --TODO IMAGE_OPC_CABLE_BLANK
 
-### Required tools
+### Required Tools
 
 - Soldering iron
 - Solder (ideally lead-free)
@@ -39,17 +39,17 @@ The assembly of the portable monitor core is fairly simple thanks to the Adafrui
 
 Additionally, a soldering stand (third hand) is really helpful but not absolutely necessary.
 
-## Step 1: Assembling RTC shield
+## Step 1: Assembling RTC Shield
 
 As the first step, the DLS is populated with all the required components and connectors. 
 
 --TODO IMAGE_DLS_EMPTY_WITH_HEADERS_ISO_VIEW
 
-### Step 1.0: Installing DLS headers
+### Step 1.0: Installing DLS Headers
 
 This step is only required if you bought a DLS that does not have the headers installed yet. For this step, follow the step `Installing the Headers` in [Adafruit's DLS manual](https://cdn-learn.adafruit.com/downloads/pdf/adafruit-data-logger-shield.pdf).
 
-### Step 1.1: Soldering the power and OPC connectors
+### Step 1.1: Soldering the Power and OPC Connectors
 
 In this step, the 2 pin power connector and 6 pin connector for the OPC are soldered onto the DLS. 
 
@@ -75,7 +75,7 @@ Your DLS should now look like the one in the image below.
 
 --TODO IMAGE_PORTABLE_CORE_CONNECTORS_SOLDERED_TOPSIDE
 
-### Step 1.2: Soldering the resistors
+### Step 1.2: Soldering the Resistors
 
 In this step, the two resistors for the OPC voltage divider are soldered onto the DLS.
 
@@ -97,7 +97,7 @@ Your DLS should now look like the one in the image below.
 
 --TODO IMAGE_PORTABLE_CORE_CONNECTORS_RESISTORS_SOLDERED_UNDERSIDE
 
-### Step 1.3: Connecting everything
+### Step 1.3: Connecting Everything
 
 With the connectors and resistors soldered, it is time to connect everything with short bits of wire. The general process for this is to cut an appropriate length of wire, strip the ends, pre-tin them and then solder the wire ends to the appropriate holes or pins.
 
@@ -121,15 +121,15 @@ In this optional step, the two status LEDs on the DLS are connected.
 
 --TODO IMAGE_PORTABLE_SCORE_LED_CONNECTIONS_SOLDERED
 
-## Step 2: Preparing the (USB) power cable
+## Step 2: Preparing the (USB) Power Cable
 
 --TODO instructions for making USB power cable
 
-## Step 3: Preparing the OPC cable
+## Step 3: Preparing the OPC Cable
 
 --TODO instructions for making OPC cable
 
-## Step 4: Putting it all together
+## Step 4: Putting It All Together
 
 With the DLS, power cable and OPC cable prepared, take the Arduino UNO and place the DLS on top. Make sure to line up all of the headers correctly and carefully push the DLS down onto the UNO. Next, insert a CR1220 button cell battery and the SD card into their slots on the DLS and connect the OPC using the 6 pin connector and OPC cable.
 
