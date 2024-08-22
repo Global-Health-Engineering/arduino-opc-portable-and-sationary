@@ -9,7 +9,7 @@ There are two variants:
 - A portable monitor to measure the personal exposure to particulate matter.
 - A stationary monitor for remote long(er)-term deployment.
 
-This repository is part of a bachelor's thesis whose goal it was to develope adaptable low-cost PM monitors and provide a simple and free guide for others also looking to build such systems. The monitors described in this repository can either be copied directly or used as the basis for custom units adapted to specific needs. The project itself is licensed under the the [`CC-BY 4.0`](LICENSE.md) license, however some of the software libraries used are come with different licenses. For more details on this, see [`section 5`](#5-software-library-licensing) of this README file.
+This repository is part of a bachelor's thesis whose goal it was to develope adaptable low-cost PM monitors and provide a simple and free guide for others also looking to build such systems. The monitors described in this repository can either be copied directly or used as the basis for custom units adapted to specific needs. The project itself is licensed under the the [`CC-BY 4.0`](LICENSE.md) license, however some of the software libraries used are come with different licenses. For more details on this, see [`section 3`](#3-software-library-licensing) of this README file.
 
 ### 1.1. System Overview
 
@@ -94,101 +94,13 @@ Instructions for the assembly, setup and usage of the monitors can be found in t
 | [`Firmware upload`](docs/portable_firmware_upload.md) | [`Firmware upload`](docs/stationary_firmware_upload.md) |
 | [`Usage`](docs/portable_usage.md)                     | [`Usage`](docs/stationary_usage.md)                     |
 
---TODO write and add hyperlinks to assembly guides in docs folder
-
-
-
-### 2.2. Stationary monitor
-
-The assembly of the stationary is a bit more involved than that of the portable one. The main reason for this is a pin conflict between the Adafruit DLS and the DFRobot SIM shield. Other than this, the process is very similar to that of the portable monitor.
-
-`BOM for the stationary monitor --TODO order`
-| Item                     | Value/note         | Qty       |
-| ------------------------ | ------------------ | :-------: |
-| Adafruit DLS             | Rev. C             | 1         |
-| Headers for DLS          | included w/ DLS    | 1 set     |
-| Connector                | 2 pin              | 1 set     |
-| Connector                | 6 pin              | 1 set     |
-| Resistor                 | VALUE_1            | 1         |
-| Resistor                 | VALUE_2            | 1         |
-| Wire                     | GAUGE              | ? colours |
-| OPC cable                | w/ small connector | 1         |
-| Arduino UNO              | R3/R4 Minima       | 1         |
-| CR1220 battery           | -                  | 1         |
-| SD card                  | max. 32 GB         | 1         |
-| DFRobot SIM7600CE-T      | -                  | 1         |
-| LED                      | Red                | 1         |
-| LED                      | Green              | 1         |
-| LED                      | Blue               | 1         |
-| LED headers              | 3 pin              | 2         |
-| SIM card                 | with data subscription| 1      |
-| Stacking headers         | for Arduino UNO    | 1         |
-
-`Required tools`
-- Soldering iron
-- Solder (ideally lead-free)
-- Soldering stand (optional)
-- Wire cutters
-- Wire strippers
-- Crimping tool (appropriate version for the chosen connectors)
-
-#### Step 1: Assembling RTC shield
-
---TODO
-
-#### Step 2: Preparing the OPC cable
-
---TODO
-
-#### Step 3: Preparing the power cable
-
---TODO
-
-#### Step 4: Replacing the UNO's headers
-
---TODO
-
-#### Step 5: Soldering the SIM shield jumper wire
-
---TODO
-
-#### Step 6: Putting it all together
-
---TODO
-
 ## 3. Uploading the software
 
 --TODO write and add hyperlinks to firmware uploady guides in docs folder
 
 With the hardware ready, the UNOs need to be flashed with the appropriate firmware. However, before doing so the RTC on the DLS needs to be set correctly. This process is the same for the portable and stationary monitors.
 
-### 3.1. Adjusting the RTC
-
---TODO
-
-### 3.2. Portable monitor
-
---TODO
-
-### 3.3. Stationary monitor
-
---TODO
-
-## 4. Using the monitors
-
---TODO write and add hyperlinks to files in docs folder
-
---TODO
-
-### 4.1. Portable monitor
-
---TODO
-
-### 4.2. Stationary monitor
-
---TODO
-
-## 5. Software library licensing
+## 3. Software library licensing
 
 The code provided in this repository makes use of the libraries listed in the following table. When using any code from this repository, make sure you follow any applicable licenses of the libraries in addition to the license of the project. A copy of the licenses is provided in the [`LICENSES`](LICENSES) directory.
 
@@ -199,7 +111,7 @@ The code provided in this repository makes use of the libraries listed in the fo
 | [RTClib](https://github.com/adafruit/RTClib)                                                      | `MIT`       | 
 | [SoftwareSerial](https://github.com/arduino/ArduinoCore-avr/tree/master/libraries/SoftwareSerial) | `LGPL v2.1` |
 
-## 6. Change log
+## 4. Change log
 
 ## Tree --TODO UPDATE
 
