@@ -1,8 +1,8 @@
 # Assembly of the portable monitor core
 
---TODO IMAGE_PORTABLE_CORE_OVERVIEW
-
 The assembly of the portable monitor core is fairly simple thanks to the Adafruit DLS. Only basic soldering skills and a bit of wire crimping are required to complete it.
+
+--TODO IMAGE_PORTABLE_CORE_OVERVIEW
 
 ### Parts list
 
@@ -37,7 +37,7 @@ The assembly of the portable monitor core is fairly simple thanks to the Adafrui
 - Wire strippers
 - Crimping tool (appropriate version for the chosen connectors)
 
-Additionally, a soldering stand ("third hand") is really helpful but not absolutely necessary.
+Additionally, a soldering stand (third hand) is really helpful but not absolutely necessary.
 
 ## Step 1: Assembling RTC shield
 
