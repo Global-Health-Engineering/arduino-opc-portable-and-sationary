@@ -6,7 +6,7 @@ The assembly of the portable monitor core is fairly simple thanks to the Adafrui
 
 ### Parts List
 
-| Item                     | Value/note             | Qty                   |
+| Item                     | Value/note             | Quantity              |
 | ------------------------ | ---------------------- | :-------------------: |
 | Arduino UNO              | R3/R4 Minima           | 1                     |
 | Adafruit DLS             | Rev. C                 | 1                     |
