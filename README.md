@@ -9,7 +9,7 @@ There are two variants:
 - A portable monitor to measure the personal exposure to particulate matter.
 - A stationary monitor for remote long(er)-term deployment.
 
-This repository is part of a bachelor's thesis whose goal it was to develope adaptable low-cost PM monitors and provide a simple and free guide for others also looking to build such systems. The monitors described in this repository can either be copied directly or used as the basis for custom units adapted to specific needs. The project itself is licensed under the the [CC-BY 4.0](LICENSE.md) license, however some of the software libraries used are come with different licenses. For more details on this, see [section 5](#5-software-library-licensing) of this README file.
+This repository is part of a bachelor's thesis whose goal it was to develope adaptable low-cost PM monitors and provide a simple and free guide for others also looking to build such systems. The monitors described in this repository can either be copied directly or used as the basis for custom units adapted to specific needs. The project itself is licensed under the the [`CC-BY 4.0`](LICENSE.md) license, however some of the software libraries used are come with different licenses. For more details on this, see [`section 5`](#5-software-library-licensing) of this README file.
 
 ### 1.1. System Overview
 
@@ -52,7 +52,7 @@ The following tables give a rough breakdown of the costs of each of the monitors
 | Small components (LEDs, resistors, wires, etc.) | N/A                                                                                                                  | ~15.-                  |
 | **Total**                              |                                                                                                                               | ~670.-                 |
 
-The cost breakdowns do **NOT** include housings for the monitors, as this is very dependant on the exact use case. They could be as simple as a plastic food container. For this project, the housings were 3D-printed on a consumer grade FDM printer. For more details on these, see [section 1.3.](#13-3d-printed-housings) of this README file.
+The cost breakdowns do **NOT** include housings for the monitors, as this is very dependant on the exact use case. They could be as simple as a plastic food container. For this project, the housings were 3D-printed on a consumer grade FDM printer. More details on these, can be found in [`section 1.3.`](#13-3d-printed-housings) of this README file.
 
 ### 1.3. 3D printed housings
 
@@ -84,7 +84,15 @@ The housing for the portable monitor is designed to be used with a 'GoPro Chesty
 #### 1.3.2. Stationary monitor
 
 
-## 2. Hardware assembly
+## 2. Instructions
+
+Instructions for the assembly, setup and usage of the monitors can be found in the [`docs`](docs) directory. The table below provides direct links to individual guides.
+
+| Portable monitor                                      | Stationary monitor                                      |
+| :---------------------------------------------------: | :-----------------------------------------------------: |
+| [`Assembly`](docs/portable_core_assembly_md)          | [`Assembly`](docs/stationary_core_assembly_md)          |
+| [`Firmware upload`](docs/portable_firmware_upload.md) | [`Firmware upload`](docs/stationary_firmware_upload.md) |
+| [`Usage`](docs/portable_usage.md)                     | [`Usage`](docs/stationary_usage.md)                      |
 
 --TODO write and add hyperlinks to assembly guides in docs folder
 
