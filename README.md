@@ -88,11 +88,11 @@ The housing for the portable monitor is designed to be used with a 'GoPro Chesty
 
 Instructions for the assembly, setup and usage of the monitors can be found in the [`docs`](docs) directory. The table below provides direct links to individual guides.
 
-| Portable monitor                                      | Stationary monitor                                      |
+| Portable                                              | Stationary                                              |
 | :---------------------------------------------------: | :-----------------------------------------------------: |
 | [`Assembly`](docs/portable_core_assembly.md)          | [`Assembly`](docs/stationary_core_assembly.md)          |
 | [`Firmware upload`](docs/portable_firmware_upload.md) | [`Firmware upload`](docs/stationary_firmware_upload.md) |
-| [`Usage`](docs/portable_usage.md)                     | [`Usage`](docs/stationary_usage.md)                      |
+| [`Usage`](docs/portable_usage.md)                     | [`Usage`](docs/stationary_usage.md)                     |
 
 --TODO write and add hyperlinks to assembly guides in docs folder
 
