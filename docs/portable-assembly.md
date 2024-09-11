@@ -2,7 +2,7 @@
 
 The assembly of the portable monitor core is fairly simple thanks to the Adafruit DLS. Only basic soldering skills and a bit of wire crimping are required to complete it.
 
-![alt text](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/portable_core_ISO.jpg)
+![portable_core_ISO](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/portable_core_ISO.jpg)
 
 ### Parts List
 
@@ -16,13 +16,13 @@ The assembly of the portable monitor core is fairly simple thanks to the Adafrui
 | OPC connector/cable      | 6 pin Molex Pico-Clasp | 1 (male)              |
 | Resistor                 | VALUE_1                | 1                     |
 | Resistor                 | VALUE_2                | 1                     |
-| Wire                     | GAUGE                  | ? colours             |
+| Wire                     | 0.25 $\textrm{mm}^2$   | 4 colours             |
 | CR1220 battery           | -                      | 1                     |
 | SD card                  | max. 32 GB             | 1                     |
 
 - For the connectors on the DLS, any type with a pitch of ~2.5 mm works, JST XH connectors are a good choice as they are pretty resistant aginst pull out and fairly compact. Alternatively, the wires _could_ be soldered directly to the DLS, skipping the use of connectores, however this is not recommended as it makes swapping any component a lot more work.
 
---TODO IMAGE_JST_CONNECTOR_2_AND_6_PIN
+![JST_connectors](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/JST_connectors.jpg)
 
 - For the OPC you need a 6 pin Molex Pico-Clasp connector. This is a _tiny_ connector and you should ideally use a special (and expensive) crimping tool to properly crimp these pins. It is easier to buy a pre-crimped cable set which already has the connector on one side (--TODO ADD_EXAMPLE_LINK).
 
