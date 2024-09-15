@@ -52,9 +52,9 @@ The following tables give a rough breakdown of the costs of each of the monitors
 | Small components (LEDs, resistors, wires, etc.) | N/A                                                                                                                  | ~15.-                  |
 | **Total**                              |                                                                                                                               | ~670.-                 |
 
-The cost breakdowns do **NOT** include housings for the monitors, as this is very dependant on the exact use case. They could be as simple as a plastic food container. For this project, the housings were 3D-printed on a consumer grade FDM printer. More details on these, can be found in [`section 1.3.`](#13-3d-printed-housings) of this README file.
+The cost breakdowns do **NOT** include housings for the monitors, as this is very dependant on the exact use case. They could be as simple as a plastic food container. For this project, the housings were 3D-printed on a consumer grade FDM printer. More details on these can be found in [`section 1.3.`](#13-3d-printed-housings) of this README file.
 
-### 1.3. 3D printed housings
+### 1.3. 3D printed housings TODO
 
 --TODO
 
@@ -84,6 +84,11 @@ The housing for the portable monitor is designed to be used with a 'GoPro Chesty
 #### 1.3.2. Stationary monitor
 
 
+
+
+
+
+
 ## 2. Instructions
 
 Instructions for the assembly, setup and usage of the monitors can be found in the [`docs`](docs) directory. The table below provides direct links to individual guides.
@@ -94,7 +99,7 @@ Instructions for the assembly, setup and usage of the monitors can be found in t
 | [`Firmware upload`](docs/portable-firmware_upload.md) | [`Firmware upload`](docs/stationary-firmware_upload.md) |
 | [`Usage`](docs/portable-usage.md)                     | [`Usage`](docs/stationary-usage.md)                     |
 
-## 3. Uploading the software
+## 3. Uploading the software TODO MOVE TO OWN DOC
 
 --TODO write and add hyperlinks to firmware uploady guides in docs folder
 
