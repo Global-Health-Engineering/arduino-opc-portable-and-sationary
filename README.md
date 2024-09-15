@@ -55,41 +55,41 @@ The following tables give a rough breakdown of the costs of each of the monitors
 
 The cost breakdowns do **NOT** include housings for the monitors, as this is very dependant on the exact use case. They could be as simple as a plastic food container. For this project, the housings were 3D-printed on a consumer grade FDM printer. More details on these can be found in [`Section 1.3.`](#13-3d-printed-housings) of this README file.
 
-### 1.3. 3D-Printed Housings --TODO
+### 1.3. 3D-Printed Housings
 
 The files for the 3D-printed housings can be found in the [`cad`](cad) directory. This also contains some simplified CAD models of the UNO and OPC to allow you to design your own housings.
 
-The designs provided can be printed on standard consuer grade FDM printers. They should be printed from PET-G or ASA to make sure they are strong enough and not easily damaged by UV radiation.
+The designs provided can be printed on standard consuer grade FDM printers. They should be printed from a material such as PETG or ASA to make sure they are strong enough and not easily damaged by UV radiation.
 
 #### 1.3.1. Portable Monitor Housing
 
 The housing for the portabel monitor is designed to be used with a GoPro 'Chesty' chest harness. This allows the monitor to be worn somewhat comfortably. A list of all the hardware required for the portable monitor housing is provided below.
 
+![Portable housing](/img/Portable_CAD.png)
+
 #### Parts List of the Portable Monitor Housing
 
-| Item                    | Value/note               | Quantity              |
-| ----------------------- | ------------------------ | :-------------------: |
-
-
-
-
+| Item                | Note        | Quantity       |
+| ------------------- | ----------- | :------------: |
+| 3D-printed parts    | PETG or ASA | 1 complete set |
+| Threaded inserts M3 | -           | 7              |
+| Threaded inserts M4 | -           | 8              |
+| M3x8 screws         | button head | 7              |
+| M3x16 screws        | button head | 2              |
+| M4x10 screws        | button head | 8              |
+| GoPro 'Chesty'      | -           | 1              |
 
 #### 1.3.2. Stationary Monitor Housing
 
-#### Parts List of the Portable Monitor Housing
-
-| Item                    | Value/note               | Quantity              |
-| ----------------------- | ------------------------ | :-------------------: |
-
-
-
-CAD files for 3D printable enclosures are located in `cad` directory. They are also shown below.
-
-![Portable housing](/img/Portable_CAD.png)
-
 ![Stationary housing](/img/Stationary_CAD.png)
 
+A list of all the hardware required for the stationary monitor housing is provided below.
 
+#### Parts List of the Portable Monitor Housing --TODO
+
+| Item                | Note        | Quantity       |
+| ------------------- | ----------- | :------------: |
+| 3D-printed parts    | PETG or ASA | 1 complete set |
 
 ## 2. Instructions
 
