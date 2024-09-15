@@ -20,7 +20,7 @@ The assembly of the stationary monitor core is a bit more involved than that of 
 | Resistor                | $2'200 \ \Omega$         | 1                     |
 | Resistor                | $3'300 \ \Omega$         | 1                     |
 | Wire                    | $0.25 \ \textrm{mm}^2$   | 4 colours             |
-| LEDs                    | $3$ or $5 \ \textrm{mm}$ | 3 (green, red, blue)  |
+| LEDs                    | $3$ or $5 \ \textrm{mm}$, w/ resistors for $5 \ \textrm{V}$ | 3 (green, red, blue)  |
 | LED headers             | 3 pin                    | 2 (matching LEDs)     |
 | CR1220 battery          | -                        | 1                     |
 | SD card                 | max. $32 \ \textrm{GB}$, FAT formatted  | 1                     |
@@ -120,6 +120,10 @@ To avoid a pin conflict between the DLS and the SIM shield, a pin on the UNO nee
 
 ## Step 6: Putting it all together
 
+- Make sure you have the jumpers on the SIM shield set as shown in the photo below.
+
+![SIM_jumpers](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/SIM_jumpers.jpg)
+
 - With the DLS, power and OPC cables and the SIM shield prepared, take the Arduino UNO and place it ontop of the SIM shield. Make sure to line up all of the headers correctly and carefully push the UNO down onto the SIM shield.
   
 - Repeat this process to place the DLS on top of the UNO.
@@ -132,14 +136,19 @@ If you printed the housings, it might be easier to screw the SIM shield onto its
 
 ![stationary_monitor](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/stationary_monitor.jpg)
 
-Congratulations, the core of your portable PM monitor is now fully assembled! Next, keep following the steps below to get them ready for using.
+Congratulations, the core of your stationary PM monitor is now fully assembled! Next, keep following the steps below to get it ready for using.
 
-## Step 7: Adjusting the RTC
+## Step 7: Preparing the Google Drive File --TODO
+
+## Step 8: Adjusting the RTC
 
 For the adjustment of the RTC, follow `Step 5` in the [assembly guide of the portable monitor](portable_assembly.md).
 
-## Step 8: Uploading the Firmware --TODO
+## Step 9: Uploading the Firmware --TODO
 
 - Open the file `Stationary.ino` in the Arduino IDE.
 
--TOOD replace the following with deeets
+-TOOD replace the following with deeets: SIM, google drive
+
+Phew, you made it! Your stationary PM monitor is now ready to start collecting measurements. Have a look at the [`usage guide`](portable_usage.md) to help you with this.
+
