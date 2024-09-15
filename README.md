@@ -95,7 +95,7 @@ To build your own PM monitors, first follow the assembly guide for you chosen ve
 
 ## 3. Software Library Licensing
 
-The code provided in this repository makes use of the libraries listed in the following table. When using any code from this repository, make sure you follow any applicable licenses of the libraries in addition to the license of the project. A copy of the licenses is provided in the [`LICENSES`](licenses) directory.
+The code provided in this repository makes use of the libraries listed in the following table. When using any code from this repository, make sure you follow any applicable licenses of the libraries in addition to the license of the project. A copy of the licenses is provided in the [`licenses`](licenses) directory.
 
 | Library | License |
 | ------- | ------- |
