@@ -42,7 +42,7 @@ The assembly of the portable monitor core is fairly simple thanks to the Adafrui
 
 Additionally, a soldering stand (third hand) is really helpful but not absolutely necessary.
 
-## Step 1: Assembling RTC Shield
+## Step 1: Assembling the DLS
 
 As the first step, the DLS is populated with all the required components and connectors.  
 
