@@ -46,7 +46,7 @@ Additionally, a soldering stand (third hand) is really helpful but not absolutel
 
 As the first step, the DLS is populated with all the required components and connectors.  
 
-### Step 1.0: Installing DLS Headers
+### Step 1.0: Installing the DLS Headers
 
 This step is only required if you bought a DLS that does not have the headers installed yet. For this step, follow the step `Installing the Headers` in [Adafruit's DLS manual](https://cdn-learn.adafruit.com/downloads/pdf/adafruit-data-logger-shield.pdf).
 
@@ -123,7 +123,7 @@ Your DLS is now complete and should look like the one in the photos below.
 
 ![portable_DLS_underside](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/portable_DLS_underside.jpg)
 
-## Step 2: Preparing the (USB) Power Cable
+## Step 2: Preparing the USB Power Cable
 
 --TODO instructions for making USB power cable
 
@@ -133,9 +133,14 @@ Your DLS is now complete and should look like the one in the photos below.
 
 ## Step 4: Putting It All Together
 
-With the DLS, power cable and OPC cable prepared, take the Arduino UNO and place the DLS on top. Make sure to line up all of the headers correctly and carefully push the DLS down onto the UNO. Next, insert a CR1220 button cell battery and the SD card into their slots on the DLS and connect the OPC using the 6 pin connector and OPC cable.
+- With the DLS, power cable and OPC cable prepared, take the Arduino UNO and place the DLS on top. Make sure to line up all of the headers correctly and carefully push the DLS down onto the UNO.
+
+- Next, insert a CR1220 button cell battery and the SD card into their slots on the DLS and connect the OPC using the 6 pin connector and OPC cable.
 
 If you printed the housings, it might be easier to screw the UNO onto its mountng spots before putting the DLS on top and to screw in the OPC before connecting its cable to the DLS.
 
-Congratulations, the core of your portable PM monitor is now fully assembled! Next, have a look at --TODO LINK_FIRMWARE_UPLOAD to finish the monitor by uploading the firmware.
+Congratulations, the core of your portable PM monitor is now fully assembled! Next, keep following the steps below to get them ready for using.
 
+## Step 5: Adjusting the RTC --TODO
+
+## Step 6: Uploading the Firmware --TODO
