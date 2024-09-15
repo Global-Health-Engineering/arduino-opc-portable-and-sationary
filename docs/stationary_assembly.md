@@ -6,10 +6,6 @@ The assembly of the stationary monitor core is a bit more involved than that of 
 
 #### Parts List --TODO merge into lower list
 
-
-| LED headers              | 3 pin              | 2         |
-
-
 | Item                    | Value/note               | Quantity              |
 | ----------------------- | ------------------------ | :-------------------: |
 | Arduino UNO             | R3/R4 Minima             | 1                     |
@@ -84,9 +80,11 @@ Your DLS is now complete and should look like the one in the photos below.
 
 ![stationary_DLS_underside](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/stationary_DLS_underside.jpg)
 
-## Step 2: Preparing the Power Cables
+## Step 2: Preparing the Power Cables --TODO
 
---TODO
+NJET- Follow `Step 2` in the [assembly guide of the portable monitor](portable_assembly.md), however use a Micro-USB cable instead of a USB Type-A cable.NJET
+
+- 
 
 ## Step 3: Preparing the OPC Cable
 
