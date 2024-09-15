@@ -15,13 +15,13 @@ The assembly of the portable monitor core is fairly simple thanks to the Adafrui
 | Wire-to-board connector | 6 pin                   | 1 set (male & female) |
 | USB cable               | type matching powerbank | 1                     |
 | OPC connector/cable     | 6 pin Molex Pico-Clasp  | 1 (male)              |
-| Resistor                | 2'200 $\Omega$          | 1                     |
-| Resistor                | 3'300 $\Omega$          | 1                     |
-| Wire                    | 0.25 $\textrm{mm}^2$    | 4 colours             |
+| Resistor                | $2'200 \ \Omega$        | 1                     |
+| Resistor                | $3'300 \ \Omega$        | 1                     |
+| Wire                    | $0.25 \ \textrm{mm}^2$  | 4 colours             |
 | CR1220 battery          | -                       | 1                     |
-| SD card                 | max. 32 GB              | 1                     |
+| SD card                 | max. $32 \ \textrm{GB}$ | 1                     |
 
-- For the wire-to-board connectors on the DLS, any type with a pitch of ~2.5 mm works, JST XH connectors are a good choice as they are pretty resistant aginst pull out and fairly compact. Alternatively, the wires _could_ be soldered directly to the DLS, skipping the use of connectores, however this is not recommended as it makes swapping any component a lot more work.
+- For the wire-to-board connectors on the DLS, any type with a pitch of $\sim 2.5 \ \textrm{mm}$ works, JST XH connectors are a good choice as they are pretty resistant aginst pull out and fairly compact. Alternatively, the wires _could_ be soldered directly to the DLS, skipping the use of connectores, however this is not recommended as it makes swapping any component a lot more work.
 
 ![JST_connectors](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/JST_connectors.jpg)
 
@@ -37,6 +37,7 @@ The assembly of the portable monitor core is fairly simple thanks to the Adafrui
 - Wire cutters
 - Wire strippers
 - Crimping tool (appropriate version for the chosen connectors)
+- Pliers
 - Multimeter
 
 Additionally, a soldering stand (third hand) is really helpful but not absolutely necessary.
