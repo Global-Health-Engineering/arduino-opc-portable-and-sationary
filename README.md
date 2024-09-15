@@ -75,6 +75,7 @@ The housing for the portabel monitor is designed to be used with a GoPro 'Chesty
 | Threaded inserts M3 | -           | 7              |
 | Threaded inserts M4 | -           | 8              |
 | M3x8 screws         | button head | 7              |
+| M3x10 screws        | button head | 7              |
 | M3x16 screws        | button head | 2              |
 | M4x10 screws        | button head | 8              |
 | GoPro 'Chesty'      | -           | 1              |
