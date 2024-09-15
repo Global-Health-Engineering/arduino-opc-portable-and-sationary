@@ -63,9 +63,11 @@ The designs provided can be printed on standard consuer grade FDM printers. They
 
 #### 1.3.1. Portable Monitor Housing
 
+![Portable housing](/img/Portable_CAD.png)
+
 The housing for the portabel monitor is designed to be used with a GoPro 'Chesty' chest harness. This allows the monitor to be worn somewhat comfortably. A list of all the hardware required for the portable monitor housing is provided below.
 
-![Portable housing](/img/Portable_CAD.png)
+![GoPro_chesty](/img/GoPro_chesty.jpg)
 
 #### Parts List of the Portable Monitor Housing
 
