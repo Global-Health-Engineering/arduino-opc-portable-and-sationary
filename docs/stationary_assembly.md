@@ -102,8 +102,19 @@ For the assembly of the OPC cable, follow `Step 3` in the [assembly guide of the
 
 ## Step 6: Putting it all together
 
-With the DLS, power and OPC cables and the SIM shield prepared, take the Arduino UNO and place it ontop of the SIM shield. Make sure to line up all of the headers correctly and carefully push the UNO down onto the SIM shield. Repeat this process to place the DLS on top of the UNO. Next, insert a CR1220 button cell battery and the SD card into their slots on the DLS and connect the OPC using the 6 pin connector and OPC cable.
+- With the DLS, power and OPC cables and the SIM shield prepared, take the Arduino UNO and place it ontop of the SIM shield. Make sure to line up all of the headers correctly and carefully push the UNO down onto the SIM shield.
+  
+- Repeat this process to place the DLS on top of the UNO.
+
+- Next, insert a CR1220 button cell battery and the SD card into their slots on the DLS and connect the OPC using the 6 pin connector and OPC cable.
 
 If you printed the housings, it might be easier to screw the SIM shield onto its mountng spots and to connect the antenna before putting the UNO and DLS on top and to screw in the OPC before connecting its cable to the DLS.
 
-Congratulations, the core of your stationary PM monitor is now fully assembled! Next, have a look at --TODO LINK_FIRMWARE_UPLOAD to finish the monitor by uploading the firmware.
+Congratulations, the core of your portable PM monitor is now fully assembled! Next, keep following the steps below to get them ready for using.
+
+## Step 7: Adjusting the RTC --TODO
+
+For the adjustment of the RTC, follow `Step 5` in the [assembly guide of the portable monitor](portable_assembly.md).
+
+
+## Step 8: Uploading the Firmware --TODO
