@@ -52,7 +52,7 @@ The assembly of the stationary monitor core is a bit more involved than that of 
 
 Additionally, a soldering stand (third hand) is really helpful but not absolutely necessary.
 
-## Step 1: Assembling RTC Shield
+## Step 1: Assembling the DLS
 
 For the assembly of the DLS, first follow `Step 1` in the [assembly guide of the portable monitor](portable_assembly.md), skipping `Step 1.4`. If you already soldered the onboard LEDs, don't worry as tis won't prevent the external ones from working.
 
