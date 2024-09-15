@@ -54,12 +54,7 @@ The following tables give a rough breakdown of the costs of each of the monitors
 
 The cost breakdowns do **NOT** include housings for the monitors, as this is very dependant on the exact use case. They could be as simple as a plastic food container. For this project, the housings were 3D-printed on a consumer grade FDM printer. More details on these can be found in [`section 1.3.`](#13-3d-printed-housings) of this README file.
 
-### 1.3. 3D printed housings TODO
-
---TODO
-
-
-
+### 1.3. 3D-Printed Housings --TODO
 
 
 The files for the 3D-printed housings can be found in the [`cad`](cad) directory. This also contains some simplified CAD models of the UNO and OPC to allow you to design your own housings.
@@ -91,21 +86,14 @@ The housing for the portable monitor is designed to be used with a 'GoPro Chesty
 
 ## 2. Instructions
 
-Instructions for the assembly, setup and usage of the monitors can be found in the [`docs`](docs) directory. The table below provides direct links to individual guides.
+To build your own PM monitors, first follow the assembly guide for you chosen version. To use you monitors, have a look at the usage guides. These can be found in the [`docs`](docs) directory. Alternatively, the table below provides direct links to individual guides.
 
-| Portable                                              | Stationary                                              |
-| :---------------------------------------------------: | :-----------------------------------------------------: |
-| [`Assembly`](docs/portable-assembly.md)          | [`Assembly`](docs/stationary-assembly.md)          |
-| [`Firmware upload`](docs/portable-firmware_upload.md) | [`Firmware upload`](docs/stationary-firmware_upload.md) |
-| [`Usage`](docs/portable-usage.md)                     | [`Usage`](docs/stationary-usage.md)                     |
+| Portable                                | Stationary                                |
+| :-------------------------------------: | :---------------------------------------: |
+| [`Assembly`](docs/portable_assembly.md) | [`Assembly`](docs/stationary_assembly.md) |
+| [`Usage`](docs/portable_usage.md)       | [`Usage`](docs/stationary_usage.md)       |
 
-## 3. Uploading the software TODO MOVE TO OWN DOC
-
---TODO write and add hyperlinks to firmware uploady guides in docs folder
-
-With the hardware ready, the UNOs need to be flashed with the appropriate firmware. However, before doing so the RTC on the DLS needs to be set correctly. This process is the same for the portable and stationary monitors.
-
-## 3. Software library licensing
+## 3. Software Library Licensing
 
 The code provided in this repository makes use of the libraries listed in the following table. When using any code from this repository, make sure you follow any applicable licenses of the libraries in addition to the license of the project. A copy of the licenses is provided in the [`LICENSES`](LICENSES) directory.
 
@@ -116,7 +104,7 @@ The code provided in this repository makes use of the libraries listed in the fo
 | [RTClib](https://github.com/adafruit/RTClib)                                                      | `MIT`       | 
 | [SoftwareSerial](https://github.com/arduino/ArduinoCore-avr/tree/master/libraries/SoftwareSerial) | `LGPL v2.1` |
 
-## 4. Change log
+## 4. Change Log
 
 ## Tree --TODO UPDATE
 
