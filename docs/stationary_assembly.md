@@ -60,15 +60,15 @@ For the assembly of the DLS, first follow `Step 1` in the [assembly guide of the
 
 To facilitate the connection of external status LEDs, headers are soldered to pins `5`, `6` and `7` as well as to the `GND` row on the DLS.
 
-If you are using female pin headers, you will first have to split off the required amount of pins. You need two strips with 3 pins each. The easiest way to achieve this for female headers is to first pull out the connector "forks" from the bottom with a pair of pliers.
+- If you are using female pin headers, you will first have to split off the required amount of pins. You need two strips with 3 pins each. The easiest way to achieve this for female headers is to first pull out the connector "forks" from the bottom with a pair of pliers.
 
 ![female_headers_forked](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/female_headers_forked.jpg)
 
- Then you can repeatedly score the plastic housing along the pin you removed until you can snap off the desired amount of pins.
+- Then you can repeatedly score the plastic housing along the pin you removed until you can snap off the desired amount of pins.
 
  ![female_headers_snapped](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/female_headers_snapped.jpg)
 
-Finally, sand the trimmed edges of the headers smooth.
+- Finally, sand the trimmed edges of the headers smooth.
 
  - Place one of the headers as shown in the photo below and solder it to the DLS. Note that it is placed on the pins labeled `5`, `6` and `7`.
 
