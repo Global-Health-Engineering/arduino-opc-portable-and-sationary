@@ -203,4 +203,4 @@ To adjust the RTC on the DLS follow the steps outlined below.The OPC and SD card
 
 - Upload the file `Portable.ino` to the UNO
 
-Phew, you made it! Your portable PM monitor is now ready to start collecting measurements
+Phew, you made it! Your portable PM monitor is now ready to start collecting measurements. Have a look at the [`usage guide`](portable_usage.md) to help you with this.
