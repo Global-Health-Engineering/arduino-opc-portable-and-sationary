@@ -108,7 +108,15 @@ Your UNO and SIM shield should now look like the ones in the photo below.
 
 ## Step 5: Soldering the SIM Shield Jumper Wire
 
---TODO
+To avoid a pin conflict between the DLS and the SIM shield, a pin on the UNO needs to be clipped and a small jumper wire soldered to the SIM shield.
+
+- Clip pin `12` of the stacking headers on the underside of the UNO as shown in the photo below.
+
+ ![clipped_pin](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/clipped_pin.jpg) 
+
+- Solder a small length of wire to the SIM shield as shown in the photo below. Note that it connects pins `8` and `12`.
+
+![jumper_wire](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/jumper_wire.jpg)
 
 ## Step 6: Putting it all together
 
@@ -118,16 +126,20 @@ Your UNO and SIM shield should now look like the ones in the photo below.
 
 - Next, insert a CR1220 button cell battery and the SD card into their slots on the DLS and connect the OPC using the 6 pin connector and OPC cable.
 
+- Insert the SIM card into the corresponding slot on the underside of the SIM shield and connect the antenna.
+
 If you printed the housings, it might be easier to screw the SIM shield onto its mountng spots and to connect the antenna before putting the UNO and DLS on top and to screw in the OPC before connecting its cable to the DLS.
 
 ![stationary_monitor](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/stationary_monitor.jpg)
 
 Congratulations, the core of your portable PM monitor is now fully assembled! Next, keep following the steps below to get them ready for using.
 
-## Step 7: Adjusting the RTC --TODO
+## Step 7: Adjusting the RTC
 
 For the adjustment of the RTC, follow `Step 5` in the [assembly guide of the portable monitor](portable_assembly.md).
 
 ## Step 8: Uploading the Firmware --TODO
 
 - Open the file `Stationary.ino` in the Arduino IDE.
+
+-TOOD replace the following with deeets
