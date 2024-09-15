@@ -1,4 +1,4 @@
-# Assembly of the Portable Monitor Core
+# Assembly of the Portable Monitor 
 
 The assembly of the portable monitor core is fairly simple thanks to the Adafruit DLS. Only basic soldering skills and a bit of wire crimping are required to complete it.
 
