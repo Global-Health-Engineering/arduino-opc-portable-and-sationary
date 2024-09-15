@@ -125,11 +125,55 @@ Your DLS is now complete and should look like the one in the photos below.
 
 ## Step 2: Preparing the USB Power Cable
 
---TODO instructions for making USB power cable
+- For the USB power cable, trim off the USB Type-A end of an old USB cable. The length of this is dependant on the location and orientation of the components in your chosen housing. If the cable is too short you can lengthen it by soldering on lengths of additional wire.
+
+- Strip the cut end of the USB cable to expose the individual wires inside. You should see four wires: white, green, red and black.
+
+![USB-A_cable_stripped](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/USB-A_cable_stripped.jpg)
+
+- Trim the white and green wires  so they are flush with the insulation of the whole cable.
+
+![USB-A_cable_trimmed](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/USB-A_cable_trimmed.jpg)
+
+- Strip the red and black wires of the USB cable and crimp on the JST connector pins. Then insert the pins into the connector in the orientation shown in the photo below. Note that the clasp side of the JST connector is facing the camera.
+
+![JST_power_orientation](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/JST_power_orientation.jpg)
+
+If you decide to use the 3D-printable housing files provided in this repository, you will have to remove the shell of the USB Type-A connector to make the cable fit. You can do this by carefully cutting throught the plastic of the connector housing and peeling it away. You might also have to remove some of the sheet metal connector housing underneath. You should end up with a cable as shown in the photo below.
+
+![USB_connector_naked](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/USB_connector_naked.jpg)
 
 ## Step 3: Preparing the OPC Cable
 
---TODO instructions for making OPC cable
+- Take the pre-crimped Pico-Clasp cable and crimp JST connector pins on the free ends of the wires.
+
+- Push the JST connector pins into the JST connector housing by matching the wires according to the two following Tables. Note that the clasp side of the connectors is facing the camera and that the numbering of the pins is from left to right.
+
+#### DLS side connector wire order.
+
+![OPC-DLS_connector](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/OPC-DLS_connector.jpg)
+
+| Pin | Wire |
+| --- | ---- |
+| 1   | 5.0V |
+| 2   | GND  |
+| 3   | DATA |
+| 4   | MOSI |
+| 5   | MISO |
+| 6   | SCK  |
+
+#### OPC side connector wire order.
+
+![OPC_connector](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/OPC_connector.jpg)
+
+| Pin | Wire |
+| --- | ---- |
+| 1   | 5.0V |
+| 2   | SCK  |
+| 3   | MISO |
+| 4   | MOSI |
+| 5   | DATA |
+| 6   | GND  |
 
 ## Step 4: Putting It All Together
 
