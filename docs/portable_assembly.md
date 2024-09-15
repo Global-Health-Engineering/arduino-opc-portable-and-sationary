@@ -149,31 +149,31 @@ If you decide to use the 3D-printable housing files provided in this repository,
 
 - Push the JST connector pins into the JST connector housing by matching the wires according to the two following Tables. Note that the clasp side of the connectors is facing the camera and that the numbering of the pins is from left to right.
 
-#### DLS side connector wire order.
-
 ![OPC-DLS_connector](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/OPC-DLS_connector.jpg)
 
-| Pin | Wire |
-| --- | ---- |
-| 1   | 5.0V |
-| 2   | GND  |
-| 3   | DATA |
-| 4   | MOSI |
-| 5   | MISO |
-| 6   | SCK  |
+#### DLS side connector wire order.
 
-#### OPC side connector wire order.
+| Pin | Wire   |
+| --- | ------ |
+| 1   | `5.0V` |
+| 2   | `GND`  |
+| 3   | `DATA` |
+| 4   | `MOSI` |
+| 5   | `MISO` |
+| 6   | `SCK`  |
 
 ![OPC_connector](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/OPC_connector.jpg)
 
-| Pin | Wire |
-| --- | ---- |
-| 1   | 5.0V |
-| 2   | SCK  |
-| 3   | MISO |
-| 4   | MOSI |
-| 5   | DATA |
-| 6   | GND  |
+#### OPC side connector wire order.
+
+| Pin | Wire   |
+| --- | ------ |
+| 1   | `5.0V` |
+| 2   | `SCK`  |
+| 3   | `MISO` |
+| 4   | `MOSI` |
+| 5   | `DATA` |
+| 6   | `GND`  |
 
 ## Step 4: Putting It All Together
 
