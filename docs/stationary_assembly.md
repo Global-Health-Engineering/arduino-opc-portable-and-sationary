@@ -1,10 +1,10 @@
-# Assembly of the Stationary Monitor Core
+# Assembly of the Stationary Monitor
 
 The assembly of the stationary monitor core is a bit more involved than that of the portable one. The main reason for this is a pin conflict between the Adafruit DLS and the DFRobot SIM shield. Other than this, the process is very similar to that of the portable monitor.
 
 ![stationary_core_ISO](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/stationary_core_ISO.jpg)
 
-#### Parts List --TODO merge into lower list
+#### Parts List
 
 | Item                    | Value/note               | Quantity              |
 | ----------------------- | ------------------------ | :-------------------: |
@@ -92,7 +92,19 @@ For the assembly of the OPC cable, follow `Step 3` in the [assembly guide of the
 
 ## Step 4: Replacing the UNO's Headers
 
---TODO
+To stack the SIM shield, UNO and DLS in the correct orders, the stacking headers of the SIM shield have to be swapped with the female headers of the UNO.
+
+![UNO_ISO](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/UNO_ISO.jpg)
+
+- Desolder the stacking headers of the SIM shield and the female headers of the UNO. This can be done by using solder wick to one by one desolder each individual pin. Take your time here and be careful not to overheat the SIM shield or UNO!
+
+- Solder the stacking headers to the UNO. To help keep them aligned you can place the DLS on top.
+
+- Soler the female headers to the SIM shield. To help keep them aligned you can place the UNO or DLS on top.
+
+Your UNO and SIM shield should now look like the ones in the photo below.
+
+![swapped_headers](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/swapped_headers.jpg)
 
 ## Step 5: Soldering the SIM Shield Jumper Wire
 
