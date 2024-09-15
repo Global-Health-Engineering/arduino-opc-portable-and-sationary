@@ -37,6 +37,7 @@ The assembly of the portable monitor core is fairly simple thanks to the Adafrui
 - Wire cutters
 - Wire strippers
 - Crimping tool (appropriate version for the chosen connectors)
+- Multimeter
 
 Additionally, a soldering stand (third hand) is really helpful but not absolutely necessary.
 
@@ -87,23 +88,33 @@ With the connectors and resistors soldered, it is time to connect everything wit
 
 The required connections are shown in the image below. It helps to use differently coloured wires to keep a better overview of what needs to be connected where (plus it looks neat).
 
---TODO IMAGE_PORTABLE_CORE_SCHEMATIC_WIRE_CONNECTONS_UNDERSIDE
+![portable_wire_4](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/portable_wire_4.jpg)
 
---TODO describe/tips for each connection
+- For the first connection, prepare a short piece of wire and solder it as shown in the photo below. Note that is soldered to **both** resistors.
 
-Your DLS should now look like the one in the image below.
+![portable_wire_1](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/portable_wire_1.jpg)
 
---TODO IMAGE_PORTABLE_CORE_WIRE_CONNECTIONS_SOLDERED_UNDERSIDE
+For the following connections, bend one end of the prepared wires as shown in the photo below. These can be pushed through the holes on the DLS like the legs of connectors or resistors.
+
+![wire_bent](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/wire_bent.jpg)
+
+- Next, connect the blue, purple and yellow wires as shown in the photos below.
+
+![portable_wire_2](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/portable_wire_2.jpg)
+
+![portable_wire_3](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/portable_wire_3.jpg)
+
+![portable_wire_4](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/portable_wire_4.jpg)
+
+With all the wires soldered it is a good idea to use a multimeter to check all connections are working and no pins are shorted together.
 
 ### Step 1.4: Connecting the LEDs (optional)
 
 In this optional step, the two status LEDs on the DLS are connected.
 
-- Connect the holes labeled `L1` and `L2` to holes `3` and `4` respectively, as shown in the schematic below. This can either be done by two _very_ short bits of wire or more easily by using bits of the resistors' trimmed off legs. You can do the connection on either side of the DLS.
+- Connect the holes labeled `L1` and `L2` to holes `3` and `4` respectively, as shown in the schematic below. This can either be done by two _very_ short bits of wire or more easily by using bits of the resistors' trimmed off legs. You can do the connection on either side of the DLS. The easiest way to solder these connections is to fill the holes on the DLS with solder and then hold the wire/leg in place with a pair of pliers while soldering.
 
---TODO IMAGE_PORTABLE_CORE_SCHEMATIC_LED_CONNECTIONS
-
---TODO IMAGE_PORTABLE_SCORE_LED_CONNECTIONS_SOLDERED
+![portable_LEDs](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/portable_LEDs.jpg)
 
 Your DLS is now complete and should look like the one in the images below.
 
