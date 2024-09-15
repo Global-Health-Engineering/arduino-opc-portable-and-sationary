@@ -9,7 +9,7 @@ There are two variants:
 - A portable monitor to measure the personal exposure to particulate matter.
 - A stationary monitor for remote long(er)-term deployment.
 
-This repository is part of a bachelor's thesis whose goal it was to develope adaptable low-cost PM monitors and provide a simple and free guide for others also looking to build such systems. The monitors described in this repository can either be copied directly or used as the basis for custom units adapted to specific needs. The project itself is licensed under the the [`CC-BY 4.0`](LICENSE.md) license, however some of the software libraries used are come with different licenses. For more details on this, see [`section 3`](#3-software-library-licensing) of this README file.
+This repository is part of a bachelor's thesis whose goal it was to develope adaptable low-cost PM monitors and provide a simple and free guide for others also looking to build such systems. The monitors described in this repository can either be copied directly or used as the basis for custom units adapted to specific needs. The project itself is licensed under the the [`CC-BY 4.0`](LICENSE.md) license, however some of the software libraries used are come with different licenses. For more details on this, see [`Section 3`](#3-software-library-licensing) of this README file.
 
 ### 1.1. System Overview
 
@@ -39,6 +39,7 @@ The following tables give a rough breakdown of the costs of each of the monitors
 | **Total**                              |                                                                                                                | ~570.-                 |
 
 #### Cost breakdown of the stationary monitor.
+
 | Name                                   | Source                                                                                                                        | Approx. price (CHF)    |
 | -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ---------------------: |
 | Arduino UNO (R3/R4 Minima)             | [Mouser](https://www.mouser.ch/ProductDetail/Arduino/ABX00080?qs=ulEaXIWI0c9tbG%2FHj5EzRA%3D%3D)                              | 20.-                   |
@@ -52,13 +53,33 @@ The following tables give a rough breakdown of the costs of each of the monitors
 | Small components (LEDs, resistors, wires, etc.) | N/A                                                                                                                  | ~15.-                  |
 | **Total**                              |                                                                                                                               | ~670.-                 |
 
-The cost breakdowns do **NOT** include housings for the monitors, as this is very dependant on the exact use case. They could be as simple as a plastic food container. For this project, the housings were 3D-printed on a consumer grade FDM printer. More details on these can be found in [`section 1.3.`](#13-3d-printed-housings) of this README file.
+The cost breakdowns do **NOT** include housings for the monitors, as this is very dependant on the exact use case. They could be as simple as a plastic food container. For this project, the housings were 3D-printed on a consumer grade FDM printer. More details on these can be found in [`Section 1.3.`](#13-3d-printed-housings) of this README file.
 
 ### 1.3. 3D-Printed Housings --TODO
 
-
 The files for the 3D-printed housings can be found in the [`cad`](cad) directory. This also contains some simplified CAD models of the UNO and OPC to allow you to design your own housings.
 
+The designs provided can be printed on standard consuer grade FDM printers. They should be printed from PET-G or ASA to make sure they are strong enough and not easily damaged by UV radiation.
+
+#### 1.3.1. Portable Monitor Housing
+
+The housing for the portabel monitor is designed to be used with a GoPro 'Chesty' chest harness. This allows the monitor to be worn somewhat comfortably. A list of all the hardware required for the portable monitor housing is provided below.
+
+#### Parts List of the Portable Monitor Housing
+
+| Item                    | Value/note               | Quantity              |
+| ----------------------- | ------------------------ | :-------------------: |
+
+
+
+
+
+#### 1.3.2. Stationary Monitor Housing
+
+#### Parts List of the Portable Monitor Housing
+
+| Item                    | Value/note               | Quantity              |
+| ----------------------- | ------------------------ | :-------------------: |
 
 
 
@@ -67,20 +88,6 @@ CAD files for 3D printable enclosures are located in `cad` directory. They are a
 ![Portable housing](/img/Portable_CAD.png)
 
 ![Stationary housing](/img/Stationary_CAD.png)
-
-
-
-#### 1.3.1. Portable monitor
-
-The housing for the portable monitor is designed to be used with a 'GoPro Chesty' harness. 
-
-
-
-#### 1.3.2. Stationary monitor
-
-
-
-
 
 
 
