@@ -2,7 +2,7 @@
 
 The assembly of the portable monitor core is fairly simple thanks to the Adafruit DLS. Only basic soldering skills and a bit of wire crimping are required to complete it.
 
-![portable_core_ISO](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/portable_core_ISO.jpg)
+![portable_monitor](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/portable_monitor.jpg)
 
 #### Parts List
 
@@ -183,7 +183,7 @@ If you decide to use the 3D-printable housing files provided in this repository,
 
 If you printed the housings, it might be easier to screw the UNO onto its mountng spots before putting the DLS on top and to screw in the OPC before connecting its cable to the DLS.
 
-![portable_monitor](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/portable_monitor.jpg)
+![portable_core_ISO](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/portable_core_ISO.jpg)
 
 Congratulations, the hardware of your portable PM monitor is now fully assembled! Next, keep following the steps below to get it ready for using.
 
