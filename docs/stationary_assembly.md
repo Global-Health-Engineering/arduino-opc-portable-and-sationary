@@ -2,7 +2,7 @@
 
 The assembly of the stationary monitor core is a bit more involved than that of the portable one. The main reason for this is a pin conflict between the Adafruit DLS and the DFRobot SIM shield. Other than this, the process is very similar to that of the portable monitor.
 
-![stationary_core_ISO](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/stationary_core_ISO.jpg)
+![stationary_monitor](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/stationary_monitor.jpg)
 
 #### Parts List
 
@@ -134,7 +134,7 @@ To avoid a pin conflict between the DLS and the SIM shield, a pin on the UNO nee
 
 If you printed the housings, it might be easier to screw the SIM shield onto its mountng spots and to connect the antenna before putting the UNO and DLS on top and to screw in the OPC before connecting its cable to the DLS.
 
-![stationary_monitor](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/stationary_monitor.jpg)
+![stationary_core_ISO](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/stationary_core_ISO.jpg)
 
 Congratulations, the core of your stationary PM monitor is now fully assembled! Next, keep following the steps below to get it ready for using.
 
