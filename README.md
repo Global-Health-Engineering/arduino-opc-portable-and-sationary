@@ -88,7 +88,7 @@ The housing for the portabel monitor is designed to be used with a GoPro 'Chesty
 
 A list of all the hardware required for the stationary monitor housing is provided below.
 
-#### Parts List of the Portable Monitor Housing --TODO
+#### Parts List of the Portable Monitor Housing
 
 | Item                | Note        | Quantity       |
 | ------------------- | ----------- | :------------: |
