@@ -4,29 +4,30 @@ The assembly of the portable monitor core is fairly simple thanks to the Adafrui
 
 ![portable_core_ISO](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/portable_core_ISO.jpg)
 
-### Parts List
+#### Parts List
 
-| Item                     | Value/note             | Quantity              |
-| ------------------------ | ---------------------- | :-------------------: |
-| Arduino UNO              | R3/R4 Minima           | 1                     |
-| Adafruit DLS             | Rev. C                 | 1                     |
-| Headers for DLS          | included w/ DLS        | 1 complete set        |
-| Connector                | 2 pin                  | 1 set (male & female) |
-| Connector                | 6 pin                  | 1 set (male & female) |
-| OPC connector/cable      | 6 pin Molex Pico-Clasp | 1 (male)              |
-| Resistor                 | VALUE_1                | 1                     |
-| Resistor                 | VALUE_2                | 1                     |
-| Wire                     | 0.25 $\textrm{mm}^2$   | 4 colours             |
-| CR1220 battery           | -                      | 1                     |
-| SD card                  | max. 32 GB             | 1                     |
+| Item                    | Value/note              | Quantity              |
+| ----------------------- | ----------------------- | :-------------------: |
+| Arduino UNO             | R3/R4 Minima            | 1                     |
+| Adafruit DLS            | Rev. C                  | 1                     |
+| Headers for DLS         | included w/ DLS         | 1 complete set        |
+| Wire-to-board connector | 2 pin                   | 1 set (male & female) |
+| Wire-to-board connector | 6 pin                   | 1 set (male & female) |
+| USB cable               | type matching powerbank | 1                     |
+| OPC connector/cable     | 6 pin Molex Pico-Clasp  | 1 (male)              |
+| Resistor                | 2'200 $\Omega$          | 1                     |
+| Resistor                | 3'300 $\Omega$          | 1                     |
+| Wire                    | 0.25 $\textrm{mm}^2$    | 4 colours             |
+| CR1220 battery          | -                       | 1                     |
+| SD card                 | max. 32 GB              | 1                     |
 
-- For the connectors on the DLS, any type with a pitch of ~2.5 mm works, JST XH connectors are a good choice as they are pretty resistant aginst pull out and fairly compact. Alternatively, the wires _could_ be soldered directly to the DLS, skipping the use of connectores, however this is not recommended as it makes swapping any component a lot more work.
+- For the wire-to-board connectors on the DLS, any type with a pitch of ~2.5 mm works, JST XH connectors are a good choice as they are pretty resistant aginst pull out and fairly compact. Alternatively, the wires _could_ be soldered directly to the DLS, skipping the use of connectores, however this is not recommended as it makes swapping any component a lot more work.
 
 ![JST_connectors](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/JST_connectors.jpg)
 
-- For the OPC you need a 6 pin Molex Pico-Clasp connector. This is a _tiny_ connector and you should ideally use a special (and expensive) crimping tool to properly crimp these pins. It is easier to buy a pre-crimped cable set which already has the connector on one side (--TODO ADD_EXAMPLE_LINK).
+- For the OPC you need a 6 pin Molex Pico-Clasp connector. This is a _tiny_ connector and you should ideally use a special (and expensive) crimping tool to properly crimp these pins. It is easier to buy a [pre-crimped cable](https://www.aliexpress.com/item/1005005897060590.html) set which already has the connector on one side.
 
---TODO IMAGE_OPC_CABLE_BLANK
+![Pico-Clasp_connector](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/Pico-Clasp_connector.jpg)
 
 ### Required Tools
 
@@ -41,9 +42,7 @@ Additionally, a soldering stand (third hand) is really helpful but not absolutel
 
 ## Step 1: Assembling RTC Shield
 
-As the first step, the DLS is populated with all the required components and connectors. 
-
---TODO IMAGE_DLS_EMPTY_WITH_HEADERS_ISO_VIEW
+As the first step, the DLS is populated with all the required components and connectors.  
 
 ### Step 1.0: Installing DLS Headers
 
@@ -53,49 +52,34 @@ This step is only required if you bought a DLS that does not have the headers in
 
 In this step, the 2 pin power connector and 6 pin connector for the OPC are soldered onto the DLS. 
 
-- First, position the 2 pin power connector as shown in the schematic below in the holes labeled `Vin` and `GND` and take note of its orientation. 
+- First, position the 2 pin power connector as shown in the photo below in the holes labeled `5v` and `GND` and take note of its orientation. 
 
---TODO IMAGE_PORTABLE_CORE_SCHEMATIC_PWR_CONNECTOR
+![portable_power_connector](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/portable_power_connector.jpg)
 
 - If you're using JST XH connectors you might have to trim a little bit of the plastic housing to clear the tips of the headers on the outside. Do this _very carefully_ with a sharp hobby knife.
 
---TODO IMAGE_JST_INTERFERENCE_TRIMMED
+![JST_trimmed](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/JST_trimmed.jpg)
 
-- Once the header is positioned, solder it from the underside, ensuring that no two adjacent pins are shorted.
+- Once the header is positioned, solder it from the underside, ensuring that the pins are not shorted.
 
---TODO IMAGE_PORTABLE_CORE_SCHEMATIC_PWR_CONNECTOR_SOLDERED_UNDERSIDE
+- Next, position the 6 pin OPC connector as shown in the photo below. Note that it is positioned so that the two pins towards the edge are on the rows labeled `5.0V` and `GND` and how it is orientated.
 
-- Next, position the 6 pin OPC connector as shown in the schematic below. Note that it is positioned so that the two pins towards the edge are on the rows labeled `5.0V` and `GND` and how it is orientated.
-
---TODO IMAGE_PORTABLE_CORE_SCHEMATIC_OPC_CONNECTOR
+![portable_OPC_connector](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/portable_OPC_connector.jpg)
 
 - Again, solder this from the underside, ensuring that no two adjacent pins are shorted.
-
-Your DLS should now look like the one in the image below.
-
---TODO IMAGE_PORTABLE_CORE_CONNECTORS_SOLDERED_TOPSIDE
 
 ### Step 1.2: Soldering the Resistors
 
 In this step, the two resistors for the OPC voltage divider are soldered onto the DLS.
 
-- First, take the `VALUE_1` resistor and bend its legs so that it fits into the holes as shown in the image below.
-
---TODO IMAGE_PORTABLE_CORE_SCHEMATIC_VALUE_1_RESISTOR
+- First, take the `2'200 ohm` resistor and bend its legs so that it fits into the holes as shown in the image below.
+![portable_R1](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/portable_R1.jpg)
 
 - Once positioned correctly, solder the resistor from the underside and trim the legs.
 
---TODO IMAGE_PORTABLE_CORE_RESISTOR_SOLDERED_UNDERSIDE
+- For the `3'300 ohm` resistor, position it as shown in the schematic below and repeat the same process as for the first resistor.
 
-- For the `VALUE_2` resistor, position it as shown in the schematic below and repeat the same process as for the first resistor.
-
---TODO IMAGE_PORTABLE_CORE_SCHEMATIC_VALE_2_RESISTOR
-
-Your DLS should now look like the one in the image below.
-
---TODO IMAGE_PORTABLE_CORE_CONNECTORS_RESISTORS_SOLDERED_TOPSIDE
-
---TODO IMAGE_PORTABLE_CORE_CONNECTORS_RESISTORS_SOLDERED_UNDERSIDE
+![portable_R2](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/portable_R2.jpg)
 
 ### Step 1.3: Connecting Everything
 
@@ -120,6 +104,12 @@ In this optional step, the two status LEDs on the DLS are connected.
 --TODO IMAGE_PORTABLE_CORE_SCHEMATIC_LED_CONNECTIONS
 
 --TODO IMAGE_PORTABLE_SCORE_LED_CONNECTIONS_SOLDERED
+
+Your DLS is now complete and should look like the one in the images below.
+
+![portable_DLS_topside](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/portable_DLS_topside.jpg)
+
+![portable_DLS_underside](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/portable_DLS_underside.jpg)
 
 ## Step 2: Preparing the (USB) Power Cable
 
