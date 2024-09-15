@@ -19,7 +19,7 @@ The assembly of the portable monitor core is fairly simple thanks to the Adafrui
 | Resistor                | $3'300 \ \Omega$        | 1                     |
 | Wire                    | $0.25 \ \textrm{mm}^2$  | 4 colours             |
 | CR1220 battery          | -                       | 1                     |
-| SD card                 | max. $32 \ \textrm{GB}$ | 1                     |
+| SD card                 | max. $32 \ \textrm{GB}$, FAT formatted | 1                     |
 
 - For the wire-to-board connectors on the DLS, any type with a pitch of $\sim 2.5 \ \textrm{mm}$ works. JST XH connectors are a good choice as they are pretty resistant aginst pull out and fairly compact. Alternatively, the wires _could_ be soldered directly to the DLS, skipping the use of connectores, however this is not recommended as it makes swapping any component a lot more work.
 
@@ -183,8 +183,24 @@ If you decide to use the 3D-printable housing files provided in this repository,
 
 If you printed the housings, it might be easier to screw the UNO onto its mountng spots before putting the DLS on top and to screw in the OPC before connecting its cable to the DLS.
 
-Congratulations, the core of your portable PM monitor is now fully assembled! Next, keep following the steps below to get them ready for using.
+![portable_monitor](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/portable_monitor.jpg)
 
-## Step 5: Adjusting the RTC --TODO
+Congratulations, the hardware of your portable PM monitor is now fully assembled! Next, keep following the steps below to get them ready for using.
 
-## Step 6: Uploading the Firmware --TODO
+## Step 5: Adjusting the RTC
+
+To adjust the RTC on the DLS follow the steps outlined below.The OPC and SD card may be connected for this but don't have to be.
+
+- Start the Arduino IDE on your PC
+
+- Connect the UNO to you PC. Make sure the coin battery is properly inserted into the holder on the DLS. before doing so
+
+- Upload the file `RTC_adjust.ino` to the UNO and let it run for at east a few seconds. You should see the current time and date being echoed to the serial monitor.
+
+- Do not disconnect the UNO from your PC until you have completed `Step 6`! If you do, the timestamps will be wrong.
+
+## Step 6: Uploading the Firmware
+
+- Upload the file `Portable.ino` to the UNO
+
+Phew, you made it! Your portable PM monitor is now ready to start collecting measurements
