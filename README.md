@@ -93,6 +93,12 @@ A list of all the hardware required for the stationary monitor housing is provid
 | Item                | Note        | Quantity       |
 | ------------------- | ----------- | :------------: |
 | 3D-printed parts    | PETG or ASA | 1 complete set |
+| Threaded inserts M3 | -           | 8              |
+| Threaded inserts M4 | -           | 4              |
+| M3x8 screws         | button head | 8              |
+| M3x10 screws        | button head | 4              |
+| M4x12 screws        | countersunk | 4              |
+| M3x20 standoffs     | male/female | 4              |
 
 ## 2. Instructions
 
