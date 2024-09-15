@@ -23,7 +23,7 @@ The assembly of the stationary monitor core is a bit more involved than that of 
 | LEDs                    | $3$ or $5 \ \textrm{mm}$ | 3 (green, red, blue)  |
 | LED headers             | 3 pin                    | 2 (matching LEDs)     |
 | CR1220 battery          | -                        | 1                     |
-| SD card                 | max. $32 \ \textrm{GB}$  | 1                     |
+| SD card                 | max. $32 \ \textrm{GB}$, FAT formatted  | 1                     |
 
 - For the wire-to-board connectors on the DLS, any type with a pitch of $\sim 2.5 \ \textrm{mm}$ works. JST XH connectors are a good choice as they are pretty resistant aginst pull out and fairly compact. Alternatively, the wires _could_ be soldered directly to the DLS, skipping the use of connectores, however this is not recommended as it makes swapping any component a lot more work.
 
@@ -108,11 +108,14 @@ For the assembly of the OPC cable, follow `Step 3` in the [assembly guide of the
 
 If you printed the housings, it might be easier to screw the SIM shield onto its mountng spots and to connect the antenna before putting the UNO and DLS on top and to screw in the OPC before connecting its cable to the DLS.
 
+![stationary_monitor](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/stationary_monitor.jpg)
+
 Congratulations, the core of your portable PM monitor is now fully assembled! Next, keep following the steps below to get them ready for using.
 
 ## Step 7: Adjusting the RTC --TODO
 
 For the adjustment of the RTC, follow `Step 5` in the [assembly guide of the portable monitor](portable_assembly.md).
 
-
 ## Step 8: Uploading the Firmware --TODO
+
+- Open the file `Stationary.ino` in the Arduino IDE.
