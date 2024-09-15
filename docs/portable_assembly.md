@@ -74,7 +74,7 @@ In this step, the 2 pin power connector and 6 pin connector for the OPC are sold
 
 In this step, the two resistors for the OPC voltage divider are soldered onto the DLS.
 
-- First, take the `2'200 ohm` resistor and bend its legs so that it fits into the holes as shown in the image below.
+- First, take the `2'200 ohm` resistor and bend its legs so that it fits into the holes as shown in the photo below.
 ![portable_R1](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/portable_R1.jpg)
 
 - Once positioned correctly, solder the resistor from the underside and trim the legs.
@@ -87,7 +87,7 @@ In this step, the two resistors for the OPC voltage divider are soldered onto th
 
 With the connectors and resistors soldered, it is time to connect everything with short bits of wire. The general process for this is to cut an appropriate length of wire, strip the ends, pre-tin them and then solder the wire ends to the appropriate holes or pins.
 
-The required connections are shown in the image below. It helps to use differently coloured wires to keep a better overview of what needs to be connected where (plus it looks neat).
+The required connections are shown in the photo below. It helps to use differently coloured wires to keep a better overview of what needs to be connected where (plus it looks neat).
 
 ![portable_wire_4](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/portable_wire_4.jpg)
 
@@ -117,7 +117,7 @@ In this optional step, the two status LEDs on the DLS are connected.
 
 ![portable_LEDs](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/portable_LEDs.jpg)
 
-Your DLS is now complete and should look like the one in the images below.
+Your DLS is now complete and should look like the one in the photos below.
 
 ![portable_DLS_topside](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/portable_DLS_topside.jpg)
 
@@ -138,3 +138,4 @@ With the DLS, power cable and OPC cable prepared, take the Arduino UNO and place
 If you printed the housings, it might be easier to screw the UNO onto its mountng spots before putting the DLS on top and to screw in the OPC before connecting its cable to the DLS.
 
 Congratulations, the core of your portable PM monitor is now fully assembled! Next, have a look at --TODO LINK_FIRMWARE_UPLOAD to finish the monitor by uploading the firmware.
+
