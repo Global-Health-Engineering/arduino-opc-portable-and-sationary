@@ -185,7 +185,7 @@ If you printed the housings, it might be easier to screw the UNO onto its mountn
 
 ![portable_monitor](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/portable_monitor.jpg)
 
-Congratulations, the hardware of your portable PM monitor is now fully assembled! Next, keep following the steps below to get them ready for using.
+Congratulations, the hardware of your portable PM monitor is now fully assembled! Next, keep following the steps below to get it ready for using.
 
 ## Step 5: Adjusting the RTC
 
