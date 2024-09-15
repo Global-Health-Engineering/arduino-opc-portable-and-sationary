@@ -54,7 +54,7 @@ Additionally, a soldering stand (third hand) is really helpful but not absolutel
 
 ## Step 1: Assembling RTC Shield
 
-For the assembly of the DLS, first follow `Step 1` in the [assembly guide of the portable monitor](portable_assembly.md), skipping `Step 1.4`.
+For the assembly of the DLS, first follow `Step 1` in the [assembly guide of the portable monitor](portable_assembly.md), skipping `Step 1.4`. If you already soldered the onboard LEDs, don't worry as tis won't prevent the external ones from working.
 
 ### Step 1.5: Soldering the External LED Headers (optional)
 
@@ -90,7 +90,7 @@ Your DLS is now complete and should look like the one in the photos below.
 
 ## Step 3: Preparing the OPC Cable
 
---TODO
+For the assembly of the OPC cable, follow `Step 3` in the [assembly guide of the portable monitor](portable_assembly.md).
 
 ## Step 4: Replacing the UNO's Headers
 
