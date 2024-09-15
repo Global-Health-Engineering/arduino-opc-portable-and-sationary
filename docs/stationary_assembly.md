@@ -92,14 +92,18 @@ Your DLS is now complete and should look like the one in the photos below.
 
 --TODO
 
-#### Step 4: Replacing the UNO's Headers
+## Step 4: Replacing the UNO's Headers
 
 --TODO
 
-#### Step 5: Soldering the SIM Shield Jumper Wire
+## Step 5: Soldering the SIM Shield Jumper Wire
 
 --TODO
 
-#### Step 6: Putting it all together
+## Step 6: Putting it all together
 
---TODO
+With the DLS, power and OPC cables and the SIM shield prepared, take the Arduino UNO and place it ontop of the SIM shield. Make sure to line up all of the headers correctly and carefully push the UNO down onto the SIM shield. Repeat this process to place the DLS on top of the UNO. Next, insert a CR1220 button cell battery and the SD card into their slots on the DLS and connect the OPC using the 6 pin connector and OPC cable.
+
+If you printed the housings, it might be easier to screw the SIM shield onto its mountng spots and to connect the antenna before putting the UNO and DLS on top and to screw in the OPC before connecting its cable to the DLS.
+
+Congratulations, the core of your stationary PM monitor is now fully assembled! Next, have a look at --TODO LINK_FIRMWARE_UPLOAD to finish the monitor by uploading the firmware.
