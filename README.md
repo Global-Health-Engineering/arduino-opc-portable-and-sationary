@@ -1,5 +1,7 @@
 # Portable and Stationary PM Monitors using Arduino UNO and Alphasense OPC-N3
 
+![portable_monitor](img/portable_monitor.jpg)
+
 ## 1. Overview
 
 This repository provides instructions for the building of particulate matter monitoring systems using the Arduino UNO and Alphasense OPC-N3 optical particle counter module.
