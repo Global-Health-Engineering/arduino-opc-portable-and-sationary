@@ -146,6 +146,8 @@ To avoid a pin conflict between the DLS and the SIM shield, a pin on the UNO nee
 
 - Insert the SIM card into the corresponding slot on the underside of the SIM shield and connect the antenna.
 
+- Do not insert the UPS batteries or connect the UPS to a USB power supply yet. Only do this once the firmware has been fully uploaded and you are ready to start using the monitor.
+
 If you printed the housings, it might be easier to screw the SIM shield onto its mountng spots and to connect the antenna before putting the UNO and DLS on top and to screw in the OPC before connecting its cable to the DLS.
 
 ![stationary_core_ISO](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/stationary_core_ISO.jpg)
