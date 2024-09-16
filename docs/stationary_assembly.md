@@ -80,11 +80,25 @@ Your DLS is now complete and should look like the one in the photos below.
 
 ![stationary_DLS_underside](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/stationary_DLS_underside.jpg)
 
-## Step 2: Preparing the Power Cables --TODO
+## Step 2: Preparing the Power Cables
 
-NJET- Follow `Step 2` in the [assembly guide of the portable monitor](portable_assembly.md), however use a Micro-USB cable instead of a USB Type-A cable.NJET
+The stationary monitor needs two power cables, one for the UNO and one for the SIM shield.
 
-- 
+- Cut two lenghts of wire and crimp JST connector pins to one end of each. The lengths of these ares dependant on the location and orientation of the components in your chosen housing.
+
+- Cut off the Micro-USB connector of an old USB cable. The length of this is dependant on the location and orientation of the components in your chosen housing. If the cable is too short you can lengthen it by soldering on lengths of additional wire.
+
+- Strip the cut end of the USB cable to expose the individual wires inside. You should see four wires: white, green, red and black.
+
+- Trim the white and green wires  so they are flush with the insulation of the whole cable.
+
+- Solder the unconnected ends of the four wires to the output terminals of the UPS board as shown in the photo below. Optionally you can include an XT30 or similar connector in the Arduino power cable.
+
+![UPS_soldered](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/UPS_soldered.jpg)
+
+- Insert the JST conector pins into their housing as shown in the photo below. Note the orientation of the wires.
+
+![JST_power_orientation](https://github.com/Global-Health-Engineering/arduino-opc-portable-and-sationary/blob/main/img/JST_power_orientation.jpg)
 
 ## Step 3: Preparing the OPC Cable
 
@@ -151,4 +165,3 @@ For the adjustment of the RTC, follow `Step 5` in the [assembly guide of the por
 -TOOD replace the following with deeets: SIM, google drive
 
 Phew, you made it! Your stationary PM monitor is now ready to start collecting measurements. Have a look at the [`usage guide`](portable_usage.md) to help you with this.
-
